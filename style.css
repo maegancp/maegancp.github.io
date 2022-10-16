@@ -18,15 +18,34 @@ nav{
 .textbox1{
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-align:center;
-    margin:10%;
-    padding-top: 2%;
+    margin:5%;
+    padding-top: 5px;
     color:black;
 }
 .topics{
-    margin:10%;
-    padding-top: 2%;
+   margin:5%;
+    padding-top: 2px;
 }
 h3{
     color:maroon;
+    font-weight:bold;
     font-family: 'Times New Roman', Times, serif;
+}
+img{
+    border-radius: 50%;
+    margin: 20px;
+    position: relative; 
+    width: 200px;
+    height: 200px; 
+    overflow: hidden; 
+    background-color:white
+}
+.column1{
+   display:flex;
+    padding: 5px;
+}
+.img-with-text{
+    text-align: center;
+    color:black;
+    font-weight: bold;
 }
