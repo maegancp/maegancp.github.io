@@ -15,3 +15,18 @@ nav{
     text-decoration: underline;
     background-color: rgba(176, 184, 180, 255) ;
 }
+.textbox1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align:center;
+    margin:10%;
+    padding-top: 2%;
+    color:black;
+}
+.topics{
+    margin:10%;
+    padding-top: 2%;
+}
+h3{
+    color:maroon;
+    font-family: 'Times New Roman', Times, serif;
+}
