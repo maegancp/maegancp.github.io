@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase JS</title>
+
+</head>
+
+<body>
+
+    <h1 id='target'></h1>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "REPLACE_WITH_YOURS",
+            authDomain: "REPLACE_WITH_YOURS.firebaseapp.com",
+            projectId: "REPLACE_WITH_YOURS",
+            storageBucket: "REPLACE_WITH_YOURS.appspot.com",
+            messagingSenderId: "REPLACE_WITH_YOURS",
+            appId: "REPLACE_WITH_YOURS",
+            databaseURL: "https://REPLACE_WITH_YOURS.asia-southeast1.firebasedatabase.app/"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        /* CODE ADDED: START */
+        // Import the functions needed to read from realtime database
+        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js";
+
+        // connect to the realtime database
+        const db = getDatabase();
+
+        // get a reference to the data 'title'
+        const title = ref(db, 'title');
+
+        // when value of 'title' changes, update to our <h1 id='target'>
+        onValue(title, (snapshot) => {
+            const data = snapshot.val(); // get the new value
+            document.getElementById('target').innerText = data;
+        });
+        /* CODE ADDED: END  */
+
+    </script>
+
+</body>
+
+</html>
