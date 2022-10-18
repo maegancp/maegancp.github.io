@@ -24,7 +24,10 @@ nav{
 }
 .topics{
    margin:5%;
-    padding-top: 2px;
+   padding-top: 2px;
+}
+.topics > h3 {
+    font-weight: bold;
 }
 .img-with-text > img{
     border-radius: 50%;

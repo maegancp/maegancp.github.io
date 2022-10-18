@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Change hospital to a baby product (e.g baby clothes) -->
+<!-- put all the images and words in a container -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,33 +37,36 @@
             Let us create a cohesive community by sharing our advices. Check poll results at the <a href="">bulletin</a>!
       </div>
 
-      <div class="topics">
-            <h3>Medical</h3>
-            <div class="column1">
+      <div class="container-fluid topics" id="app">
+            <h3>Baby Products</h3>  <!-- insert div row here -->
+            <div class="col-3">
                 <div class="img-with-text">
-                    <img src="./img/hospital.png" alt="hospital"><p>Hospital</p>
+                    <img src="./img/hospital.png" alt="hospital" onclick="choosing('hospital')"> <a href="quiz.html?topic=hospital">Hospital</a> 
                 </div>
+                <!-- div col -->
                 <div class="img-with-text">
-                    <img src="./img/milk bottle 2.png" alt="milkbottle"><p>Milk Bottle</p>
+                    <img src="./img/milk bottle 2.png" alt="milkbottle" onclick="choosing('milkbottle')"> <a href="quiz.html?topic=milkbottle">Milk Bottle</a> 
                 </div>
+                <!-- div col -->
                 <div class="img-with-text">
-                     <img src="./img/prams 3.png" alt="pram"><p>Pram</p>
+                    <img src="./img/prams 3.png" alt="pram" onclick="choosing('prams')"> <a href="quiz.html?topic=prams">Pram</a> 
                 </div>
             </div>
-            <h3>Body Care</h3>
+            <h3>Body Care</h3> <!-- div row -->
             <div class="column1">
                 <div class="img-with-text">
-                    <img src="./img/stretch marks.png" alt="stretchmark"><p>Stretch Mark</p>
+                   <a href="quiz.html?topic=stretchmark" onclick="choosing('stretchmark')"> <img src="./img/stretch marks.png" alt="stretchmark" onclick="choosing('stretchmark')"><p>Stretch Mark</p> </a> 
                 </div>
                 <div class="img-with-text">
-                    <img src="./img/vitamins.png" alt="vitamin"><p>Vitamin</p>
+                    <a href="#" onclick="choosing('vitamin')"> <img src="./img/vitamins.png" alt="vitamin"><p>Vitamin</p> </a> 
                 </div>
                 <div class="img-with-text">
-                    <img src="./img/body oil.png" alt="body oil"><p>Body Oil</p>
+                    <a href="#" onclick="choosing('body oil')"> <img src="./img/body oil.png" alt="body oil"><p>Body Oil</p> </a> 
                 </div>
                 
             </div>
 
       </div>
+<script src="quiz.js"></script>     
 </body>
 </html>
