@@ -26,5 +26,48 @@
               </li>
               </ul>
       </nav>
+    <div class="container">
+		<div class="login">
+			<h1>Welcome, Mommy!</h1>
+			<form action="authenticate.php" method="post">
+				<label for="username">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="username" placeholder="Username" id="username" required>
+				<label for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="password" placeholder="Password" id="password" required>
+				<button class="login-button" title="login" onclick="validate()">Log In</button>
+
+        <input type="button" onclick ="" value="New Mommy? Sign up here!" />
+
+			</form>     
+    </div>
+		</div>
+    <!-- <script>
+      const loginCombos = {
+    nat: 'natpass',
+    dog: 'dogpass',
+    cat: 'catpass',
+    clown: 'clownpass'
+};
+
+  function validate() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const userExists = loginCombos.hasOwnProperty(username)
+    const rightPass = loginCombos[username] === password
+
+    if (userExists && rightPass) {
+        alert('Login Successful');
+        window.location.replace('home.html');
+        return false;
+        } else {
+        alert('Sorry, your username or password was incorrect. Please double-check your login information and try again.')
+        return false;
+        }
+}
+</script> -->
 </body>
 </html>
