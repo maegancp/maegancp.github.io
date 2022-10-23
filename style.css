@@ -36,7 +36,8 @@ nav{
     width: 200px;
     height: 200px; 
     overflow: hidden; 
-    background-color:white
+    background-color:white;
+    text-align:center;
 }
 .column1{
    display:flex;
@@ -46,4 +47,9 @@ nav{
     text-align: center;
     color:black;
     font-weight: bold;
+}
+.col-3{
+        display:flex;
+        padding: 5px;
+        margin:3%;
 }
