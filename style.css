@@ -3,10 +3,7 @@ body{
     color: rgba(117, 89, 125, 1);
     font-family: Roboto, sans-serif;
     margin: auto;
-    background-image: url(./Pregnancy-Vaccines-protect-baby-crop.png);
-    background-repeat:no-repeat;
-    background-position: left;
-    background-size: contain;
+
 }
 nav{
     background-color: rgba(255, 238, 238, 1);
@@ -113,4 +110,8 @@ nav{
 
 .container {
     text-align: left;
+    background-image: url(./Pregnancy-Vaccines-protect-baby-crop.png);
+    background-repeat:repeat;
+    background-position: left;
+    background-size:cover;
 }
