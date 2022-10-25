@@ -1,5 +1,5 @@
-import { initializeApp } from "firebase/app";
-import { getDatabase, ref, set } from "firebase/database";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+  import { getDatabase, ref, set, onValue, push } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js";
         // Your web app's Firebase configuration
         const firebaseConfig = {
             apiKey: "AIzaSyAIBTV0ugGqIMp5lfSdUDXhVMg7cQQMiWk",
@@ -15,10 +15,48 @@ import { getDatabase, ref, set } from "firebase/database";
         // Initialize Firebase
 const app = initializeApp(firebaseConfig)
 const db = getDatabase()
+if (document.title=="Quiz"){
+    document.getElementById("submit").addEventListener("click",writeInput)
+    function writeInput(){
+        push(ref(db, 'quiz/'+topic),
+            document.getElementById('input').value
+        )
+    }
+}
 
-function writeInput(){
-    set(ref(db, 'test/01'), {
-        test: 'abc'
+function getAllInputs(){
+    onValue(ref(db,'quiz'), (snapshot) => {
+        var data = snapshot.val()
+        console.log(data)
     })
 }
 
+if (document.title=="Register"){
+    document.getElementById("regis").addEventListener("click",register)
+    function register(){
+        set(ref(db, 'users/'+document.getElementById('username').value),{
+            username: document.getElementById('username').value,
+            fetus_nickname: document.getElementById('fetus').value,
+            duedate: document.getElementById('due').value,
+            email: document.getElementById('email').value,
+            password: document.getElementById('pw').value
+    })
+    }
+}
+
+if (document.title=='Login'){
+    document.getElementById('login').addEventListener('click',validate)
+    function validate(){
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        onValue(ref(db,'users/'+username), (snapshot) => {
+            var data = snapshot.val()
+            if (data!=null&&data.password==password){
+                alert('Good!')
+            }
+            else{
+                alert('Username/Password entered is invalid')
+            }
+        })
+    }
+}

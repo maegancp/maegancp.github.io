@@ -9,3 +9,4 @@ if (document.title=="Quiz"){
     console.log(topic)
     document.getElementsByTagName('h3')[0].innerText = "Which brand do you prefer for "+topic+"?"
 }
+
