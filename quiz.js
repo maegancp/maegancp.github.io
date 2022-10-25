@@ -6,5 +6,6 @@ function choosing(c)
 
 if (document.title=="Quiz"){
     var topic = document.location.href.split('?')[1].split('=')[1]
+    console.log(topic)
     document.getElementsByTagName('h3')[0].innerText = "Which brand do you prefer for "+topic+"?"
 }

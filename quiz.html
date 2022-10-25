@@ -29,13 +29,62 @@
 
   <div class="container-fluid">
     <h3 class="row"></h3>
-    <input class="row form-control mx-auto mb-4" type="text" placeholder="Enter your product here!">
-    <button class="row btn btn-primary mx-auto float-end">Contribute Now!</button>
+    <input class="row form-control mx-auto mb-4" id="input" type="text" placeholder="Enter your product here!">
+    <button class="row btn btn-primary mx-auto float-end" onclick="writeInput()">Contribute Now!</button>
   </div>
   
 
   
 
 <script src="quiz.js"></script>
+<!-- <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script> -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js";
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAIBTV0ugGqIMp5lfSdUDXhVMg7cQQMiWk",
+            authDomain: "prepnancy-c0c9b.firebaseapp.com",
+            projectId: "prepnancy-c0c9b",
+            storageBucket: "prepnancy-c0c9b.appspot.com",
+            messagingSenderId: "56668153455",
+            appId: "1:56668153455:web:af3c28b4282093ca598f9a",
+            measurementId: "G-X27L846Z32",
+            databaseURL: "https://prepnancy-c0c9b-default-rtdb.asia-southeast1.firebasedatabase.app/"
+          };
+
+        // Initialize Firebase
+const app = initializeApp(firebaseConfig)
+const db = getDatabase()
+
+function writeInput(){
+    set(ref(db, 'test/01'), {
+        test: 'abc'
+    })
+}
+
+
+</script>
+<!-- <script type="module">
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAIBTV0ugGqIMp5lfSdUDXhVMg7cQQMiWk",
+            authDomain: "prepnancy-c0c9b.firebaseapp.com",
+            projectId: "prepnancy-c0c9b",
+            storageBucket: "prepnancy-c0c9b.appspot.com",
+            messagingSenderId: "56668153455",
+            appId: "1:56668153455:web:af3c28b4282093ca598f9a",
+            measurementId: "G-X27L846Z32",
+            databaseURL: "https://prepnancy-c0c9b-default-rtdb.asia-southeast1.firebasedatabase.app/"
+          };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig)
+
+</script>-->
+<!-- <script src="try.js"></script>  -->
 </body>
 </html>
