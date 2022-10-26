@@ -1,3 +1,6 @@
+// https://quickchart.io/documentation/word-cloud-api/ word cloud API
+//  https://www.rgraph.net/canvas/bar.html bargraph
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
 import {
   getDatabase,
@@ -34,20 +37,60 @@ if (document.title == "Quiz") {
 }
 
 if (document.title == "Bulletin Homepage") {
+  function bar(d) {
+    console.log(d)
+    var data = [10, 15, 8];
+
+    new RGraph.Bar({
+      id: "cvs",
+      data: data,
+      options: {
+        backgroundGridHlines: false,
+        backgroundGridVlines: false,
+        backgroundGridBorder: false,
+        yaxis: false,
+        xaxis: false,
+        colors: ["#552586"],
+        textSize: 24,
+        xaxisLabels: "",
+        yaxisLabelsColor: "rgba(235, 216, 195, 1)",
+        labelsAbove: true,
+        labelsAboveSpecific: d,
+        // labelsAboveBackground: 'rgb(253,253,0)'
+      },
+    }).draw();
+  }
+
+  getAllInputs();
   document.getElementById("products").addEventListener("change", getAllInputs);
   function getAllInputs() {
     var chosen = document.getElementById("products").value;
     onValue(ref(db, "quiz/" + chosen), (snapshot) => {
       var data = snapshot.val();
+      var top3 = []
       if (data != null) {
         axios
           .get("https://quickchart.io/wordcloud", {
             params: {
               text: Object.values(data).join(" "),
+              // backgroundColor: 'white'
             },
           })
           .then((response) => {
-            document.getElementById("results").innerHTML = response.data
+            // console.log(Object.values(data).join(" "))
+            // console.log(response.data)
+            document.getElementById("results").innerHTML = response.data;
+            var cnt = 0
+            for (let elem of document.getElementById("results").children[0]
+              .children) {
+              console.log(elem.getAttribute("font-size"));
+              if (cnt<3){
+                top3.push(elem.textContent)
+                cnt +=1
+              }
+            }
+            bar(["🥈"+top3[1], "🥇"+top3[0], "🥉"+top3[2]])
+
           })
           .catch((error) => {
             console.log(error.message);

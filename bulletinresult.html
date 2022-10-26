@@ -35,7 +35,7 @@
       <div class="result_dropbox">
         <label for="products"> Category:</label>
         <select name="products" id="products">
-             <option value="babypacifier">Baby Pacifier</option>
+             <option value="babypacifier" selected>Baby Pacifier</option>
              <option value="milkbottle">Milk Bottle</option>
             <option value="pram">Pram</option>
             <option value="stretchmark">Stretch Mark</option>
@@ -48,7 +48,7 @@
           Community's Recommendation
         </div>
 
-        <div id="results"></div>
+        <div id="results" class="d-flex justify-content-center"></div>
 
         <!-- comment - source: https://developers.google.com/chart/interactive/docs/gallery/barchart -->
         <!-- OR THIS https://www.syncfusion.com/kb/10855/how-to-create-horizontal-bar-chart-in-js -->
@@ -62,6 +62,10 @@
     </div>
     <!-- Axios -->
     <script src='https://unpkg.com/axios/dist/axios.js'></script>
+    <script src="https://www.rgraph.net/libraries/RGraph.common.core.js"></script>
+<script src="https://www.rgraph.net/libraries/RGraph.bar.js"></script>
+
+<canvas id="cvs" width="500" height="600" class="d-block mx-auto"></canvas>
     <script src="quiz.js"></script>   
     <script src="try.js" type="module"></script>  
     </body>
