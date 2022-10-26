@@ -24,7 +24,7 @@ nav{
     color:black;
 }
 .topics{
-   margin:5%;
+   margin-top:5%;
    padding-top: 2px;
 }
 .topics > h3 {
@@ -32,12 +32,15 @@ nav{
 }
 .img-with-text > img{
     border-radius: 50%;
-    margin: 20px;
+    margin: 0px;
     position: relative; 
-    width: 200px;
-    height: 200px; 
+    width: 20vw;
+    height: 20vw; 
     overflow: hidden; 
     background-color:white
+}
+.img-with-text > a{
+    font-size: 4vh;
 }
 .column1{
    display:flex;
@@ -52,7 +55,7 @@ nav{
 * {
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
-    font-size: 16px;
+    /* font-size: 16px; */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
