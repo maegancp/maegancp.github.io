@@ -38,7 +38,6 @@ if (document.title == "Quiz") {
 
 if (document.title == "Bulletin Homepage") {
   function bar(d) {
-    console.log(d)
     var data = [10, 15, 8];
 
     new RGraph.Bar({
@@ -62,6 +61,7 @@ if (document.title == "Bulletin Homepage") {
   }
 
   getAllInputs();
+  window.addEventListener('resize', getAllInputs);
   document.getElementById("products").addEventListener("change", getAllInputs);
   function getAllInputs() {
     var chosen = document.getElementById("products").value;
@@ -73,6 +73,8 @@ if (document.title == "Bulletin Homepage") {
           .get("https://quickchart.io/wordcloud", {
             params: {
               text: Object.values(data).join(" "),
+              width: window.innerWidth
+              // colors: ["#8B8989","#8B6969","#6F4242","#BC8F8F","#CD9B9B","#8B3A3A","#C67171","#802A2A","#C54E4E","#CD5C5C","#DC8C8C","#CD5555","#A52A2A","#8B2323","#8E2323","#A62A2A","#CD3333","#CC3232","#EEB4B4","#BE2625","#8B1A1A","#B22222","#CD2626","#DB2929","#8C1717","#F08080","#EE6363","#EE3B3B","#EE2C2C","#330000","#660000","#800000","#8B0000","#CD0000","#EE0000","#FF0000","#FF3030","#FF3333","#FF4040","#FF6666","#FF6A6A","#FFC1C1","#FFCCCC","#FFFAFA","#A02422"]
               // backgroundColor: 'white'
             },
           })
@@ -83,12 +85,13 @@ if (document.title == "Bulletin Homepage") {
             var cnt = 0
             for (let elem of document.getElementById("results").children[0]
               .children) {
-              console.log(elem.getAttribute("font-size"));
+              // console.log(elem.getAttribute("font-size"));
               if (cnt<3){
                 top3.push(elem.textContent)
                 cnt +=1
               }
             }
+            console.log(RGraph.ObjectRegistry.list())
             bar(["🥈"+top3[1], "🥇"+top3[0], "🥉"+top3[2]])
 
           })
