@@ -159,3 +159,8 @@ MAGIC
        -o-transform: translate3d( 0, 0, -64000px ) scale(128);
           transform: translate3d( 0, 0, -64000px ) scale(128);
 }
+#avatar{
+    position:absolute;
+    
+}
+
