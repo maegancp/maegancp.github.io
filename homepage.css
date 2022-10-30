@@ -125,7 +125,7 @@ MAGIC
 }
 
 #first {
-  background-image: url(https://treehouse-codepen.s3.amazonaws.com/multiplane/landscape1.svg);
+  background-image: url(img/finalland.svg);
   -webkit-transform: translate3d( 0, 0, -11500px) scale(16);
      -moz-transform: translate3d( 0, 0, -11500px) scale(16);
       -ms-transform: translate3d( 0, 0, -11500px) scale(16);
@@ -159,8 +159,10 @@ MAGIC
        -o-transform: translate3d( 0, 0, -64000px ) scale(128);
           transform: translate3d( 0, 0, -64000px ) scale(128);
 }
-#avatar{
+/* #avatar{
     position:absolute;
-    
-}
+    width:50px;
+    height:50px;
 
+}
+ */
