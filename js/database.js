@@ -27,11 +27,14 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase();
 
 if (document.title == "Quiz") {
-  document.getElementById("submit").addEventListener("click", writeInput);
+  progressButton.addEventListener("click", writeInput);
+  inputField.addEventListener("keyup", function (e) {
+    if (e.keyCode == 13) writeInput();
+  })
   function writeInput() {
     push(
-      ref(db, "quiz/" + topic),
-      document.getElementById("input").value.toLowerCase()
+      ref(db, "quiz/" + document.location.href.split('?')[1].split('=')[1]),
+      document.getElementById("inputField").value.toLowerCase()
     );
   }
 }
