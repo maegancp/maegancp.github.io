@@ -132,3 +132,40 @@ MAGIC
        -o-transform: translate3d( 0, 0, -11500px) scale(16);
           transform: translate3d( 0, 0, -11500px) scale(16);
 }
+.bulletinhouse{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  text-align: center;
+  font-size: 32px;
+  line-height: 1.2;
+  pointer-events: none;
+}
+.calendarhouse{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  padding: 30px;
+  text-align: center;
+  font-size: 32px;
+  line-height: 1.2;
+  pointer-events: none;
+}
+.profilehouse{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  padding: 30px;
+  text-align: center;
+  font-size: 32px;
+  line-height: 1.2;
+  pointer-events: none;
+}
