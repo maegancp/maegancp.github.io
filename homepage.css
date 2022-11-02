@@ -124,45 +124,11 @@ MAGIC
           transform-style: preserve-3d;
 }
 
-#first {
-  background-image: url(img/finalland.svg);
+#backgroundpic {
+  background-image: url(img/4.svg);
   -webkit-transform: translate3d( 0, 0, -11500px) scale(16);
      -moz-transform: translate3d( 0, 0, -11500px) scale(16);
       -ms-transform: translate3d( 0, 0, -11500px) scale(16);
        -o-transform: translate3d( 0, 0, -11500px) scale(16);
           transform: translate3d( 0, 0, -11500px) scale(16);
 }
-
-#second {
-  background-image: url(https://treehouse-codepen.s3.amazonaws.com/multiplane/landscape2.svg);
-  -webkit-transform: translate3d( 0, 0, -24000px ) scale(32);
-     -moz-transform: translate3d( 0, 0, -24000px ) scale(32);
-      -ms-transform: translate3d( 0, 0, -24000px ) scale(32);
-       -o-transform: translate3d( 0, 0, -24000px ) scale(32);
-          transform: translate3d( 0, 0, -24000px ) scale(32);
-}
-
-#third {
-  background-image: url(https://treehouse-codepen.s3.amazonaws.com/multiplane/landscape3.svg);
-  -webkit-transform: translate3d( 0, 0, -48000px ) scale(64);
-     -moz-transform: translate3d( 0, 0, -48000px ) scale(64);
-      -ms-transform: translate3d( 0, 0, -48000px ) scale(64);
-       -o-transform: translate3d( 0, 0, -48000px ) scale(64);
-          transform: translate3d( 0, 0, -48000px ) scale(64);
-}
-
-#fourth {
-  background-image: url(https://treehouse-codepen.s3.amazonaws.com/multiplane/landscape4.svg);
-  -webkit-transform: translate3d( 0, 0, -64000px ) scale(128);
-     -moz-transform: translate3d( 0, 0, -64000px ) scale(128);
-      -ms-transform: translate3d( 0, 0, -64000px ) scale(128);
-       -o-transform: translate3d( 0, 0, -64000px ) scale(128);
-          transform: translate3d( 0, 0, -64000px ) scale(128);
-}
-/* #avatar{
-    position:absolute;
-    width:50px;
-    height:50px;
-
-}
- */
