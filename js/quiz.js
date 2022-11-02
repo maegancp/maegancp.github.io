@@ -1,7 +1,7 @@
 (function () {
-  var tTime = 100; // transition transform time from #register in ms
-  var wTime = 200; // transition width time from #register in ms
-  var eTime = 1000; // transition width time from inputLabel in ms
+  var tTime = 100;
+  var wTime = 200;
+  var eTime = 1000;
 
   inputLabel.innerText = "What brand do you use for "+ document.location.href.split('?')[1].split('=')[1]+'?';
   inputField.focus();
@@ -13,37 +13,20 @@
     if (e.keyCode == 13) validate();
   });
 
-  // functions
-  // --------------
-
-  // when all the questions have been answered
   function done() {
-    // remove the box if there is no next question
+
     register.className = "close";
 
-    register.innerText = '<h1>Hi</h1>'
-    // add the h1 at the end with the welcome text
-    // var h1 = document.createElement("h1");
-    // h1.appendChild(
-    //   document.createTextNode("Thank you for contributing")
-    // );
-    // setTimeout(function () {
-    //   register.parentElement.appendChild(h1);
-    //   setTimeout(function () {
-    //     h1.style.opacity = 1;
-    //   }, 50);
-    // }, eTime);
+    setTimeout(function () {
+      thankyou.removeAttribute('hidden')
+    }, eTime);
   }
 
-  // when submitting the current question
   function validate() {
     ok(function () {
       hideCurrent(done);
     });
   }
-
-  // helper
-  // --------------
 
   function hideCurrent(callback) {
     inputContainer.style.opacity = 0;

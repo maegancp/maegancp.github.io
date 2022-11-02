@@ -40,28 +40,28 @@ if (document.title == "Quiz") {
 }
 
 if (document.title == "Bulletin Homepage") {
-  function bar(d) {
-    console.log(d)
-    var data = [10, 15, 8];
+  // function bar(d) {
+  //   console.log(d)
+  //   var data = [10, 15, 8];
 
-    new RGraph.Bar({
-      id: "cvs",
-      data: data,
-      options: {
-        backgroundGridHlines: false,
-        backgroundGridVlines: false,
-        backgroundGridBorder: false,
-        yaxis: false,
-        xaxis: false,
-        colors: ["#552586"],
-        textSize: 24,
-        xaxisLabels: "",
-        yaxisLabelsColor: "rgba(235, 216, 195, 1)",
-        labelsAbove: true,
-        labelsAboveSpecific: d,
-        // labelsAboveBackground: 'rgb(253,253,0)'
-      },
-    }).draw();
+  //   new RGraph.Bar({
+  //     id: "cvs",
+  //     data: data,
+  //     options: {
+  //       backgroundGridHlines: false,
+  //       backgroundGridVlines: false,
+  //       backgroundGridBorder: false,
+  //       yaxis: false,
+  //       xaxis: false,
+  //       colors: ["#552586"],
+  //       textSize: 24,
+  //       xaxisLabels: "",
+  //       yaxisLabelsColor: "rgba(235, 216, 195, 1)",
+  //       labelsAbove: true,
+  //       labelsAboveSpecific: d,
+  //       // labelsAboveBackground: 'rgb(253,253,0)'
+  //     },
+  //   }).draw();
   }
 
   getAllInputs();
@@ -92,7 +92,10 @@ if (document.title == "Bulletin Homepage") {
                 cnt +=1
               }
             }
-            bar(["🥈"+top3[1], "🥇"+top3[0], "🥉"+top3[2]])
+            document.getElementById('podium0').innerText = "🥇"+top3[0] ;
+            document.getElementById('podium1').innerText = "🥈"+top3[1] ;
+            document.getElementById('podium2').innerText = "🥉"+top3[2] ;
+            // bar(["🥈"+top3[1], "🥇"+top3[0], "🥉"+top3[2]])
 
           })
           .catch((error) => {
@@ -101,7 +104,7 @@ if (document.title == "Bulletin Homepage") {
       }
     });
   }
-}
+// }
 
 if (document.title == "Register") {
   document.getElementById("regis").addEventListener("click", register);
