@@ -1,76 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css' 
-        rel='stylesheet' integrity='sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx' 
-        crossorigin='anonymous'>
-        <link rel="stylesheet" href="style.css">
-        
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-</head>
-<body>
-    <nav class="navbar">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-           <img src= './prepnancy logo.png' style="width: 150px;">
-          </a>
-              <ul class="navbar-nav hstack">
-              <li class="nav-item me-3">
-                <a class="nav-link" aria-current="page" href="/aboutus.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/usefullinks.html">Useful Links</a>
-              </li>
-              </ul>
-      </nav>
-    <div class="container">
-		<div class="login">
-			<h1>Welcome, Mommy!</h1>
-			<!-- <form> -->
-				<label for="username">
-					<i class="fas fa-user"></i>
-				</label>
-				<input type="text" name="username" placeholder="Username" id="username" required>
-				<label for="password">
-					<i class="fas fa-lock"></i>
-				</label>
-				<input type="password" name="password" placeholder="Password" id="password" required>
-				<button class="login-button" title="login" id="login" >Log In</button>
+    <link rel="stylesheet" href="./css/login.css" />
+  </head>
+  <body>
+    <main>
+      <div class="box">
+        <div class="inner-box">
+          <div class="forms-wrap">
+            <form action="index.html" autocomplete="off" class="sign-in-form">
+              <div class="logo">
+                <img src="./img/logo.png" alt="PREPnancy" />
+                <h4>PREPnancy</h4>
+              </div>
 
-        <input type="button" onclick ="" value="New Mommy? Sign up here!" />
+              <div class="heading">
+                <h2>Welcome Back</h2>
+                <h6>Not registred yet?</h6>
+                <a href="#" class="toggle">Sign up</a>
+              </div>
 
-			<!-- </form>      -->
-    </div>
-		</div>
-    <!-- <script>
-      const loginCombos = {
-    nat: 'natpass',
-    dog: 'dogpass',
-    cat: 'catpass',
-    clown: 'clownpass'
-};
+              <div class="actual-form">
+                <div class="input-wrap">
+                  <input
+                    type="text"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                    id="username"
+                  />
+                  <label>Username</label>
+                </div>
 
-  function validate() {
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-    const userExists = loginCombos.hasOwnProperty(username)
-    const rightPass = loginCombos[username] === password
+                <div class="input-wrap">
+                  <input
+                    type="password"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                    id="password"
+                  />
+                  <label>Password</label>
+                </div>
 
-    if (userExists && rightPass) {
-        alert('Login Successful');
-        window.location.replace('home.html');
-        return false;
-        } else {
-        alert('Sorry, your username or password was incorrect. Please double-check your login information and try again.')
-        return false;
-        }
-}
-</script> -->
+                <input type="submit" id="login" value="Sign In" class="sign-btn" />
 
-<script src="try.js" type="module"></script>
-</body>
+                <p class="text">
+                  Forgotten your password or you login details?
+                  <a href="#">Get help</a> signing in
+                </p>
+              </div>
+            </form>
+
+            <form action="index.html" autocomplete="off" class="sign-up-form">
+              <div class="logo">
+                <img src="./img/logo.png" alt="PREPnancy" />
+                <h4>Prepnancy</h4>
+              </div>
+
+              <div class="heading">
+                <h2>Get Started</h2>
+                <h6>Already have an account?</h6>
+                <a href="#" class="toggle">Sign in</a>
+              </div>
+
+              <div id="app" class="actual-form">
+                <div class="input-wrap">
+                  <input
+                    type="text"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                    id="susername"
+                  />
+                  <label>Username</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    type="text"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                    id="fetus"
+                  />
+                  <label>Fetus Nickname</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    type="date"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                    id="due"
+                  />
+                  <label>Baby Due Date</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    type="email"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                    id="email"
+                  />
+                  <label>Email</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    type="password"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                    id="pw"
+                  />
+                  <label>Password</label>
+                </div>
+
+                <input type="submit" value="Sign Up" id="regis" class="sign-btn" />
+
+                <p class="text">
+                  By signing up, I agree to the
+                  <a href="#">Terms of Services</a> and
+                  <a href="#">Privacy Policy</a>
+                </p>
+              </div>
+            </form>
+          </div>
+
+          <div class="carousel">
+            <div class="images-wrapper">
+              <img src="./img/baby pacifier.jpg" class="image img-1 show" alt="" />
+              <img src="./img/milk bottle.jpg" class="image img-2" alt="" />
+              <img src="./img/pram.jpg" class="image img-3" alt="" />
+            </div>
+
+            <div class="text-slider">
+              <div class="text-wrap">
+                <div class="text-group">
+                  <h2>Create your own appointments</h2>
+                  <h2>View the trend among mummies</h2>
+                  <h2>Get real medical information</h2>
+                </div>
+              </div>
+
+              <div class="bullets">
+                <span class="active" data-value="1"></span>
+                <span data-value="2"></span>
+                <span data-value="3"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/login.js"></script>
+    <script src="./js/database.js" type="module"></script>
+  </body>
 </html>

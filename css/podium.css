@@ -1,0 +1,21 @@
+#podium0, #podium1, #podium2 {
+    width: 30vw;
+}
+#podium0 { /* gold */
+  background: linear-gradient(to right,#BF953F, #FCF6BA, #B38728);
+    height: 90vh;
+}
+#podium1 { /* silver */
+  background: linear-gradient(to right,#787878, #b5b5b5, #e3e3e3, #b5b5b5, #787878);
+    height: 70vh;
+}
+#podium2 { /* bronze */
+  background: linear-gradient(to right,#844414, #cf7d52, #fcd5be, #cf7d52, #844414);
+    height: 50vh;
+}
+td {
+    height: 100vh;
+    vertical-align: bottom;
+    padding: 5px;
+    text-align: center;
+}
