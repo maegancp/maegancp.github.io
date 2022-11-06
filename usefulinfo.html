@@ -1,0 +1,130 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Useful Information</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styleM.css" />
+    <script src='https://cdn.jsdelivr.net/npm/vue@next'></script>
+
+    <!-- for icons in footer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+
+      @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&family=Playfair+Display&display=swap');
+      
+  </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/homepage.html">
+         <img src= './logo2.png' style="width: 100px;">
+        </a>
+            <ul class="navbar-nav hstack">
+              <li class="nav-item me-3">
+                  <a class="nav-link" aria-current="page" href="aboutus.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/index.html">Sign Out</a>
+              </li>
+            </ul>
+    </nav>
+    
+    <div class="container-fluid">
+      <div id="start">
+        <img class="img-fluid" src="ashton-mullins-y16sN3fCwIw-unsplash.jpg" alt="">
+        <div class="row jumbotron " >
+          <h1 class="display-5">Useful Information</h1>
+        </div>
+      </div>
+    
+      <div class="tag">  
+        <div class="row">
+          <div id="container-fluid" class="text-center">
+
+
+            <div class="center">
+
+              <div id="register">
+                <i id="progressButton" class="ion-android-arrow-forward next">></i>
+                <div id="inputContainer">
+                  <input id="inputField" type="text" placeholder="Search pregnancy information" required />
+                  <!-- <label id="inputLabel"></label> -->
+                      <div id="app">
+                      <datalist id="displayCat" style="margin-bottom:10vh;">
+                        <option v-for="cat in cats" class="category ">
+                          <a v-bind:href="cat.link" class="nav-link">{{ cat.name }}</a>
+                        </option>
+                      </datalist>
+                    </div>
+                  
+                </div>
+              </div>
+            </div>
+            
+
+            
+        </div>
+        </div>
+
+
+    <div class="row">
+      <footer class="footer">
+        <div class="container-fluid" style="text-align:center;">
+          
+            <div class="row" >
+              <div class="col-sm-2 pb-4"><img src= './logo2.png' style="width: 125px;margin:auto;"></div>
+                <div class="col-sm-3">
+                  
+
+                    <ul class="list-unstyled" >
+                        <li><a href="">Team</a></li>
+                        <li><a href="">Legal Terms</a></li>
+                        <li><a href="">Support</a></li>
+                    </ul>
+
+                      <span class="nav-item"><a href="" class="nav-link"><i class="fa fa-facebook fa-lg"></i></a></span>
+                      <span class="nav-item"><a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></span>
+                      <span class="nav-item"><a href="" class="nav-link"><i class="fa fa-github fa-lg"></i></a></span>
+                      <span class="nav-item"><a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></span>
+
+                    <div class="row mt-5">
+                      <p class="contactUs">© PREPnancy 2022</p>
+                    </div>
+
+                </div>
+                <div class="col-sm-7">
+                    <h6 class="contactUs">Contact Us</h6>
+                    <form class="mb-0">
+                      <fieldset class="form-group mb-2">
+                          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                      </fieldset>
+                      <fieldset class="form-group mb-2">
+                          <textarea class="form-control" id="exampleMessage" placeholder="Message"></textarea>
+                      </fieldset>
+                      <fieldset class="form-group">
+                          <button type="button" class="btn btn-outline-dark">Send</button>
+                      </fieldset>
+                  </form>
+                </div>                
+              </div>
+            </div>
+    </footer>
+    </div>
+  </div>
+  </div>
+
+  </body>
+  <script src="aboutus.js"></script>
+  <script src="usefulinfo.js"></script>
+</html>
