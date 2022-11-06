@@ -7,6 +7,7 @@ const images = document.querySelectorAll(".image");
 inputs.forEach((inp) => {
   inp.addEventListener("focus", () => {
     inp.classList.add("active");
+    
   });
   inp.addEventListener("blur", () => {
     if (inp.value != "") return;

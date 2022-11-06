@@ -132,7 +132,6 @@ if (document.title == "Login") {
   }
   document.getElementById("regis").addEventListener("click", register);
   function register() {
-    console.log('regis')
     set(ref(db, "users/" + document.getElementById("susername").value), {
       username: document.getElementById("susername").value,
       fetus_nickname: document.getElementById("fetus").value,
