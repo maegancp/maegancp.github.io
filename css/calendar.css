@@ -4,11 +4,14 @@
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
-body { padding: 0; margin: 0; }
+
+body { padding: 30px; 
+      margin: 0; 
+    }
 :root {
-  --bg-color-a: #3b39af; /* page header + form label */
-  --bg-color-b: #404040; /* calendar header */
-  --bg-color-c: #d73a3a; /* buttons */
+  --bg-color-a: #e7a9ca; /* page header + form label */
+  --bg-color-b: #be9cc2; /* calendar header */
+  --bg-color-c: #ce54b5; /* buttons */
 }
 .hide { display: none !important; }
 
