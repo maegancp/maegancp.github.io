@@ -34,9 +34,54 @@ displayInfo.addEventListener("click", (event) => {
 
 
 
-inputLabel.innerText = "Search pregnancy information" ; 
-inputField.focus();
-inputContainer.style.opacity = 1;
+(function () {
+    var tTime = 100;
+    var wTime = 200;
+    var eTime = 1000;
+  
+    inputLabel.innerText = "Search pregnancy information" ; 
+    inputField.focus();
+    inputContainer.style.opacity = 1;
+  
+    progressButton.addEventListener("click", validate);
+    inputField.addEventListener("keyup", function (e) {
+      transform(0, 0); // ie hack to redraw
+      if (e.keyCode == 13) validate();
+    });
+  
+    // function done() {
+  
+    //   register.className = "close";
+  
+    //   setTimeout(function () {
+    //     thankyou.removeAttribute('hidden')
+    //   }, eTime);
+
+    //   register.className = 'open'
+    // }
+  
+    function validate() {
+      ok(function () {
+        hideCurrent(done);
+      });
+    }
+  
+    function hideCurrent(callback) {
+      inputContainer.style.opacity = 0;
+      setTimeout(callback, wTime);
+    }
+  
+    function transform(x, y) {
+      register.style.transform = "translate(" + x + "px ,  " + y + "px)";
+    }
+  
+    function ok(callback) {
+      register.className = "";
+      setTimeout(transform, tTime * 0, 0, 10);
+      setTimeout(transform, tTime * 1, 0, 0);
+      setTimeout(callback, tTime * 2);
+    }
+  })();
 
 const app = Vue.createApp({
     data() {
@@ -57,19 +102,20 @@ const app = Vue.createApp({
                 {name:'Premature labour and birth', link:'https://api.nhs.uk/pregnancy/labour-and-birth/signs-of-labour/premature-labour-and-birth/'},
                 {name:'Pain relief in labour', link:'https://api.nhs.uk/pregnancy/labour-and-birth/what-happens/pain-relief-in-labour/'},
                 {name:'Your body after the birth', link:'https://api.nhs.uk/pregnancy/labour-and-birth/after-the-birth/your-body/'}
-            ]}}, 
+            ], 
 
-            selectedCat: null,
+            selectedCat: null
+        }},
 
     methods: {
         getInfo(index) {
             url = this.cats[index].link;
-            console.log("url: " + url)
+            console.log("url: " + url) ;
 
             axios.get(url)
 
             .then(response => {
-                toDisplay = `<h1>${this.cats[index].name}</h1><br>`
+                toDisplay = `<h1>${this.cats[index].name}</h1><br>` ; 
                 for (obj in response.data["mainEntityOfPage"]) {
                     toDisplay += "<h3>" + response.data["mainEntityOfPage"][obj]["mainEntityOfPage"][0]["headline"] + "</h3><br>" + response.data["mainEntityOfPage"][obj]["mainEntityOfPage"][0]["text"] ;
                 }
