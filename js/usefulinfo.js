@@ -42,28 +42,44 @@ const app = Vue.createApp({
     data() {
         return {
             cats : [
-                {name: 'Signs and symptoms of pregnancy', link:"signs.html" },
-                {name: 'Planning your pregnancy', link: 'planning.html'},
-                {name:'Health things you should know in pregnancy', link:'healthThings.html'},
-                {name:'Your pregnancy to-do list',link:'toDoList.html'},
-                {name:'Have a healthy diet in pregnancy', link:'healthyDiet.html'}, 
-                {name:'Foods to avoid in pregnancy', link:'foodsAvoid.html'}, 
-                {name:'Vitamins, supplements and nutrition in pregnancy', link:'vitamins.html'},
-                {name:'Exercise in pregnancy', link:'exercise.html'},
-                {name:'12-week scan', link:'twelveWeek.html'},
-                {name:'20-week screening scan', link:'twentyWeek.html'},
-                {name:'Pack your bag for labour', link:'packingLabour.html'}, 
-                {name:'Signs that labour has begun', link:'signsLabour.html'},
-                {name:'Premature labour and birth', link:'prematureLabour.html'},
-                {name:'Pain relief in labour', link:'painRelief.html'},
-                {name:'Your body after the birth', link:'afterBirth.html'}
+                {name: 'Signs and symptoms of pregnancy', link:"https://api.nhs.uk/pregnancy/trying-for-a-baby/signs-and-symptoms-of-pregnancy/" },
+                {name: 'Planning your pregnancy', link: 'https://api.nhs.uk/pregnancy/trying-for-a-baby/signs-and-symptoms-of-pregnancy/'},
+                {name:'Health things you should know in pregnancy', link:'https://api.nhs.uk/pregnancy/finding-out/health-things-you-should-know-in-pregnancy/'},
+                {name:'Your pregnancy to-do list',link:'https://api.nhs.uk/pregnancy/finding-out/your-pregnancy-to-do-list/'},
+                {name:'Have a healthy diet in pregnancy', link:'https://api.nhs.uk/pregnancy/keeping-well/have-a-healthy-diet/'}, 
+                {name:'Foods to avoid in pregnancy', link:'https://api.nhs.uk/pregnancy/keeping-well/foods-to-avoid/'}, 
+                {name:'Vitamins, supplements and nutrition in pregnancy', link:'https://api.nhs.uk/pregnancy/keeping-well/vitamins-supplements-and-nutrition/'},
+                {name:'Exercise in pregnancy', link:'https://api.nhs.uk/pregnancy/keeping-well/exercise/'},
+                {name:'12-week scan', link:'https://api.nhs.uk/pregnancy/your-pregnancy-care/12-week-scan/'},
+                {name:'20-week screening scan', link:'https://api.nhs.uk/pregnancy/your-pregnancy-care/20-week-scan/'},
+                {name:'Pack your bag for labour', link:'https://api.nhs.uk/pregnancy/labour-and-birth/preparing-for-the-birth/pack-your-bag-for-labour/'}, 
+                {name:'Signs that labour has begun', link:'https://api.nhs.uk/pregnancy/labour-and-birth/signs-of-labour/signs-that-labour-has-begun/'},
+                {name:'Premature labour and birth', link:'https://api.nhs.uk/pregnancy/labour-and-birth/signs-of-labour/premature-labour-and-birth/'},
+                {name:'Pain relief in labour', link:'https://api.nhs.uk/pregnancy/labour-and-birth/what-happens/pain-relief-in-labour/'},
+                {name:'Your body after the birth', link:'https://api.nhs.uk/pregnancy/labour-and-birth/after-the-birth/your-body/'}
             ]}}, 
 
-    // methods: {
-    //     write(cat) {
-    //         document.getElementById("display").innerHTML = cat.name;
+            selectedCat: null,
 
-    //     }
-    // }
+    methods: {
+        getInfo(index) {
+            url = this.cats[index].link;
+            console.log("url: " + url)
+
+            axios.get(url)
+
+            .then(response => {
+                toDisplay = `<h1>${this.cats[index].name}</h1><br>`
+                for (obj in response.data["mainEntityOfPage"]) {
+                    toDisplay += "<h3>" + response.data["mainEntityOfPage"][obj]["mainEntityOfPage"][0]["headline"] + "</h3><br>" + response.data["mainEntityOfPage"][obj]["mainEntityOfPage"][0]["text"] ;
+                }
+                document.getElementById("display").innerHTML = toDisplay;
+            })
+
+            .catch(error => {
+                console.log(error);
+            })
+        }
+    }
 
         }).mount("#app")

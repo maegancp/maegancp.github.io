@@ -63,9 +63,8 @@
      
                       <div id="app">
                       <datalist id="displayCat" style="margin-bottom:10vh;">
-                        <option v-for="cat in cats" class="category ">
-                          <span >{{ cat.name }}</span>
-                          <!-- <a v-bind:href="cat.link" class="nav-link">{{ cat.name }}</a> -->
+                        <option v-for="(cat,index) in cats" class="category" v-bind:key="index" v-on:click="getInfo(index)">
+                          {{ cat.name }}
                         </option>
                       </datalist>
                     </div>
@@ -74,7 +73,7 @@
               </div>
             </div>
 
-            <div id="display">display info here</div>
+            <div id="display" style="margin-bottom:20vh;" >display info here</div>
 
             
 
@@ -132,5 +131,4 @@
   </body>
   <script src="js/aboutus.js"></script>
   <script src="js/usefulinfo.js"></script>
-  <!-- <script src="js/quiz.js"></script> -->
 </html>
