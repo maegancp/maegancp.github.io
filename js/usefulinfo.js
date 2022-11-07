@@ -29,7 +29,7 @@ const displayInfo = document.getElementById("displayCat") ;
 
 displayInfo.addEventListener("click", (event) => {
     document.getElementById("display").innerText = "hello";
-    console.log(event.target.value);
+    console.log("hello" + event.target.value);
 });
 
 
@@ -62,7 +62,7 @@ displayInfo.addEventListener("click", (event) => {
   
     function validate() {
       ok(function () {
-        hideCurrent(done);
+        // hideCurrent(done);
       });
     }
   
@@ -109,13 +109,16 @@ const app = Vue.createApp({
 
     methods: {
         getInfo(index) {
+            // this function doesnt appear to be called when the user clicks on the category in search bar
+            // information to be displayed where id='display' in html file 
+            console.log("test")
             url = this.cats[index].link;
             console.log("url: " + url) ;
 
             axios.get(url)
 
             .then(response => {
-                toDisplay = `<h1>${this.cats[index].name}</h1><br>` ; 
+                toDisplay = `<h2>${this.cats[index].name}</h2><br>` ; 
                 for (obj in response.data["mainEntityOfPage"]) {
                     toDisplay += "<h3>" + response.data["mainEntityOfPage"][obj]["mainEntityOfPage"][0]["headline"] + "</h3><br>" + response.data["mainEntityOfPage"][obj]["mainEntityOfPage"][0]["text"] ;
                 }
