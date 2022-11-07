@@ -125,7 +125,7 @@ MAGIC
 }
 
 #backgroundpic {
-  background-image: url(/img/4.svg);
+  background-image: url(../img/4.svg);
   -webkit-transform: translate3d( 0, 0, -11500px) scale(16);
      -moz-transform: translate3d( 0, 0, -11500px) scale(16);
       -ms-transform: translate3d( 0, 0, -11500px) scale(16);
@@ -162,7 +162,7 @@ MAGIC
   border:pink;
   color: pink;
   font-weight: bold;
-  padding: 15px 32px;
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
