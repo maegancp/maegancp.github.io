@@ -58,12 +58,14 @@
               <div id="register">
                 <i id="progressButton" class="ion-android-arrow-forward next">></i>
                 <div id="inputContainer">
-                  <input id="inputField" type="text" placeholder="Search pregnancy information" required />
-                  <!-- <label id="inputLabel"></label> -->
+                  <input list="displayCat" id="inputField" type="text" required />
+                  <label id="inputLabel"></label>
+     
                       <div id="app">
                       <datalist id="displayCat" style="margin-bottom:10vh;">
                         <option v-for="cat in cats" class="category ">
-                          <a v-bind:href="cat.link" class="nav-link">{{ cat.name }}</a>
+                          <span >{{ cat.name }}</span>
+                          <!-- <a v-bind:href="cat.link" class="nav-link">{{ cat.name }}</a> -->
                         </option>
                       </datalist>
                     </div>
@@ -71,6 +73,9 @@
                 </div>
               </div>
             </div>
+
+            <div id="display">display info here</div>
+
             
 
             
@@ -127,4 +132,5 @@
   </body>
   <script src="js/aboutus.js"></script>
   <script src="js/usefulinfo.js"></script>
+  <!-- <script src="js/quiz.js"></script> -->
 </html>

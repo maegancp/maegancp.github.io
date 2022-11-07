@@ -25,6 +25,19 @@ searchInput.addEventListener("keyup", (event) => {
     }
 });
 
+const displayInfo = document.getElementById("displayCat") ; 
+
+displayInfo.addEventListener("click", (event) => {
+    document.getElementById("display").innerText = "hello";
+    console.log(event.target.value);
+});
+
+
+
+inputLabel.innerText = "Search pregnancy information" ; 
+inputField.focus();
+inputContainer.style.opacity = 1;
+
 const app = Vue.createApp({
     data() {
         return {
@@ -44,6 +57,13 @@ const app = Vue.createApp({
                 {name:'Premature labour and birth', link:'prematureLabour.html'},
                 {name:'Pain relief in labour', link:'painRelief.html'},
                 {name:'Your body after the birth', link:'afterBirth.html'}
-            ]}}
+            ]}}, 
+
+    // methods: {
+    //     write(cat) {
+    //         document.getElementById("display").innerHTML = cat.name;
+
+    //     }
+    // }
 
         }).mount("#app")

@@ -1,5 +1,5 @@
 body {
-    background: #466368;
+    /* background: #466368; */
     background: linear-gradient(to right, #f5ffd8, #ffe2da, #f2eeeb);
     border-radius: 6px;
     height: 120px;
@@ -135,6 +135,7 @@ p {
     width: 90%;
 }
 
+/* start of footer */
 
 .footer {
   bottom: 0;
@@ -179,7 +180,7 @@ footer .form-control {
   font-weight: bold; 
 }
 
-
+/* end of footer */
 
 #displayCat {
   list-style: none;
@@ -199,8 +200,8 @@ footer .form-control {
 }
 
 .center {
-  margin-top: 10vh;
-  margin-bottom: 5vh ; 
+  margin-top: 30vh;
+  margin-bottom: 30vh ; 
   display: flex;
   justify-content: center;
   align-items: center;
