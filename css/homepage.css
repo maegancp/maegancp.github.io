@@ -160,14 +160,19 @@ MAGIC
   font-size: 18px;
 }
 .btn1{
-  background-color:rgba(0, 0, 0, 0.533);
-  border:pink;
-  color: pink;
-  font-weight: bold;
-  padding: 10px 20px;
+  background-color: rgba(88, 60, 60, 0.907);
+  border: none;
+  color: white;
+  padding: 5px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   font-family: 'Mulish', sans-serif;
+  font-weight: bold;
+}
+
+.btn1:hover {
+  background-color: rosybrown;
+  color:white ; 
 }
