@@ -48,6 +48,7 @@ body {
   color: #fff; background: var(--bg-color-b);
   font-weight: 700; text-align: center;
   padding: 15px 0;
+  border:1px solid rgba(65, 62, 62, 0.325)
 }
 
 /* (C3) BODY - INDIVIDUAL DAYS */
@@ -55,7 +56,7 @@ body {
 .calToday { background: linear-gradient(to right, #eecda3ad, #ef629f56); }
 .calToday .cellDate { color: black; }
 .calBody .calCell {
-  border: 1px solid rgba(65, 62, 62, 0.077);
+  border: 1px solid rgba(65, 62, 62, 0.1);
   min-height: 80px;
 }
 .cellDate, .evt { padding: 5px; }
@@ -116,3 +117,5 @@ body {
 .calBody .calCell:hover{
   background-color: rgba(188, 143, 143, 0.602);
 }
+
+.calBody .calBlank:hover { background: rgba(0, 0, 0, 0.2); }
