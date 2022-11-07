@@ -113,7 +113,7 @@ form.sign-up-form {
 }
 
 .toggle:hover {
-  color: #8371fd;
+  color: rosybrown;
 }
 
 .input-wrap {
@@ -185,7 +185,7 @@ label {
 }
 
 .text a:hover {
-  color: #8371fd;
+  color: rosybrown;
 }
 
 main.sign-up-mode form.sign-in-form {
