@@ -4,7 +4,8 @@ const main = document.querySelector("main");
 const bullets = document.querySelectorAll(".bullets span");
 const images = document.querySelectorAll(".image");
 
-inputs.forEach((inp) => {
+if (document.title != "Profile") {
+  inputs.forEach((inp) => {
   inp.addEventListener("focus", () => {
     inp.classList.add("active");
     
@@ -14,6 +15,13 @@ inputs.forEach((inp) => {
     inp.classList.remove("active");
   });
 });
+}
+else {
+  inputs.forEach((inp) => {
+    inp.classList.add("active");
+  });
+}
+
 
 toggle_btn.forEach((btn) => {
   btn.addEventListener("click", () => {
