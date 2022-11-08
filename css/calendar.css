@@ -53,7 +53,7 @@ body {
 
 /* (C3) BODY - INDIVIDUAL DAYS */
 .calBlank { background: rgba(0, 0, 0, 0.101); }
-.calToday { background: linear-gradient(to right, #eecda3ad, #ef629f56); }
+.calToday { background: linear-gradient(to right, #eecda37d, #ef629f2e); }
 .calToday .cellDate { color: black; }
 .calBody .calCell {
   border: 1px solid rgba(65, 62, 62, 0.1);

@@ -66,9 +66,9 @@ if (document.title == "Community Contributions") {
                 cnt += 1;
               }
             }
-            document.getElementById("podium0").innerText = "🥇" + top3[0];
-            document.getElementById("podium1").innerText = "🥈" + top3[1];
-            document.getElementById("podium2").innerText = "🥉" + top3[2];
+            document.getElementById("podium0").innerHTML = "🥇" + "<br>&nbsp" + top3[0] + "&nbsp";
+            document.getElementById("podium1").innerHTML = "🥈" + "<br>&nbsp" + top3[1] + "&nbsp";
+            document.getElementById("podium2").innerHTML = "🥉" + "<br>&nbsp" + top3[2] + "&nbsp";
             // bar(["🥈"+top3[1], "🥇"+top3[0], "🥉"+top3[2]])
           })
           .catch((error) => {
