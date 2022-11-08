@@ -10,11 +10,16 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
+body {
+  /* background: #466368; */
+  background: linear-gradient(to right, #f5ffd8, #ffe2da, #f2eeeb);
+  border-radius: 6px;
+  height: 120px;
+  font-family: "Mulish", sans-serif;
+  margin: 10px;
 }
 
-body {
+.body {
   display: grid;
   place-items: center;
 }
@@ -81,13 +86,13 @@ body {
   transition: transform calc(var(--d) * 2) var(--e);
 }
 .card:nth-child(1):before {
-  background-image: url(../img/baby_pacifier.jpg);
+  background-image: url(../img/pexels-ivan-samkov-8504239.jpg);
 }
 .card:nth-child(2):before {
-  background-image: url(../img/milk_bottle.jpg);
+  background-image: url(../img/pexels-anna-shvets-11369284.jpg);
 }
 .card:nth-child(3):before {
-  background-image: url(../img/pram.jpg);
+  background-image: url(../img/pexels-william-fortunato-6393383.jpg);
 }
 .card:nth-child(4):before {
   background-image: url(../img/stretch_marks.png);
@@ -172,4 +177,93 @@ body {
 .card:focus-within .content > *:not(.title) {
     transition-duration: 0s;
   }
+}
+.nav-link {
+  color: rgba(65, 62, 62, 0.7);
+  font-weight: bold;
+  font-family: "Mulish", sans-serif;
+  /* font-style: italic; */
+  position: relative;
+  z-index: 1;
+  padding: 8px;
+  display: inline-block;
+}
+
+/* nav {
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 50px 0;
+  box-shadow: 0px 5px 0px #dedede;
+} */
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #aaa;
+  font-weight: 800;
+  /* text-transform: uppercase; */
+  margin: 0 10px;
+}
+
+.nav-link,
+.nav-link:after,
+.nav-link:before {
+  transition: all 0.7s;
+}
+
+nav ul li a:hover {
+  color: rgb(65, 62, 62);
+}
+
+/* .nav-link:hover {
+  background-color: rgba(176, 184, 180, 255);
+} */
+.nav-link::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: ".";
+  color: transparent;
+  /* background: #ecced1; */
+  /* background: linear-gradient(to right, #eecda3ad, #ef629f56);  */
+  background-color: rgba(188, 143, 143, 0.392);
+  opacity: 0;
+  border-radius: 10px;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+}
+
+.nav-link:hover::after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  color: rgb(65, 62, 62);
+  text-align: center;
+}
+
+h3 {
+  font-family: "Playfair Display", serif;
+  color: rgb(65, 62, 62);
+  text-align: center;
 }/*# sourceMappingURL=bulletin.css.map */

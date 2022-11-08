@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="../css/quiz.css">
+     <!-- <link rel="stylesheet" href="../css/quiz.css"> -->
     <title>Bulletin Homepage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
@@ -29,74 +29,74 @@
       </a>
           <ul class="navbar-nav hstack">
             <li class="nav-item me-3">
-                <a class="nav-link" aria-current="page" href="aboutus.html">About Us</a>
+                <a class="nav-link" aria-current="page" href="../aboutus.html">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/index.html">Sign Out</a>
+                <a class="nav-link" href="../index.html">Sign Out</a>
             </li>
           </ul>
   </nav>
 
-      <div class="textbox1">
-            <h1>Share with our community!</h1>
-            Let us create a cohesive community by sharing our advices. Check poll results at the <a href="bulletinresult.html"> bulletin </a>!
-      </div>
-
-      <div class="container-fluid" id="app">
-            <h3>Baby Products</h3>
-            <div class="row page_content m-0">
-                
-                <div class="card col-4">
-                    <div class="content">
-                        <h2 class="title"> Baby Pacifier</h2>
-                        <button class="btnn" onclick="choosing('babypacifier')">take a poll</button> 
+      <div class="body">
+          <div class="textbox1">
+                <h1 class="row">Share with our community!</h1>
+                <p class="'row">Let us create a cohesive community by sharing our advices. Check poll results at the <a href="bulletinresult.html">bulletin</a>!</p>
+          </div>
+          <div class="container-fluid" id="app">
+                <h3>Baby Products</h3>
+                <div class="row page_content m-0">
+          
+                    <div class="card col-4">
+                        <div class="content">
+                            <h2 class="title"> Baby Pacifier</h2>
+                            <button class="btnn" onclick="choosing('babypacifier')">take a poll</button>
+                        </div>
+                    </div>
+                    <div class="card col-4">
+                        <div class="content">
+                            <h2 class="title">Milk Bottle</h2>
+                            <button class="btnn" onclick="choosing('milkbottle')">take a poll</button>
+                        </div>
+                    </div>
+                    <div class="card col-4">
+                        <div class="content">
+                            <h2 class="title">Pram</h2>
+                            <button class="btnn" onclick="choosing('pram')">take a poll</button>
+                        </div>
                     </div>
                 </div>
-                <div class="card col-4">
-                    <div class="content">
-                        <h2 class="title">Milk Bottle</h2> 
-                        <button class="btnn" onclick="choosing('milkbottle')">take a poll</button> 
+                <h3>Body Care</h3>
+                <div class="row page_content m-0">
+                    <div class="card col-4">
+                        <div class="content">
+                            <h2 class="title">Stretch Marks</h2>
+                            <button class="btnn" onclick="choosing('stretchmark')">take a poll</button>
+                        </div>
+                        <!-- <img src="../img/stretch marks.png" alt="stretchmark" onclick="choosing('stretchmark')"> <br>
+                        <a href="quiz.html?topic=stretchmark">Stretch Mark</a>  -->
                     </div>
-                </div>
-                <div class="card col-4">
-                    <div class="content">
-                        <h2 class="title">Pram</h2> 
-                        <button class="btnn" onclick="choosing('pram')">take a poll</button>
+                    <div class="card col-4">
+                        <div class="content">
+                            <h2 class="title">Vitamin</h2>
+                            <button class="btnn" onclick="choosing('vitamin')">take a poll</button>
+                        </div>
+                        <img src="../img/vitamins.png" alt="vitamin" onclick="choosing('vitamin')"> <br> <a href="quiz.html?topic=vitamin">Vitamin</a>
+                    </div>
+                    <div class="card col-4">
+                        <div class="content">
+                            <h2 class="title">Body Oil</h2>
+                            <button class="btnn" onclick="choosing('bodyoil')">take a poll</button>
+                        </div>
+                        <!-- <img src="../img/body oil.png" alt="bodyoil" onclick="choosing('bodyoil')"> <br> <a href="quiz.html?topic=bodyoil">Body Oil</a>  -->
                     </div>
                 </div>
             </div>
-            <h3>Body Care</h3> 
-            <div class="row page_content m-0">
-                <div class="card col-4">
-                    <div class="content">
-                        <h2 class="title">Stretch Marks</h2>
-                        <button class="btnn" onclick="choosing('stretchmark')">take a poll</button>
-                    </div>
-                    <!-- <img src="../img/stretch marks.png" alt="stretchmark" onclick="choosing('stretchmark')"> <br> 
-                    <a href="quiz.html?topic=stretchmark">Stretch Mark</a>  -->
-                </div>
-                <div class="card col-4">
-                    <div class="content">
-                        <h2 class="title">Vitamin</h2>
-                        <button class="btnn" onclick="choosing('vitamin')">take a poll</button>
-                    </div>
-                    <img src="../img/vitamins.png" alt="vitamin" onclick="choosing('vitamin')"> <br> <a href="quiz.html?topic=vitamin">Vitamin</a> 
-                </div>
-                <div class="card col-4">
-                    <div class="content">
-                        <h2 class="title">Body Oil</h2>
-                        <button class="btnn" onclick="choosing('bodyoil')">take a poll</button>
-                    </div>
-                    <!-- <img src="../img/body oil.png" alt="bodyoil" onclick="choosing('bodyoil')"> <br> <a href="quiz.html?topic=bodyoil">Body Oil</a>  -->
-                </div>
             </div>
-        </div>
-        </div>
-            <br>
-        <!-- <div class="card"> -->
-            
+                <br>
+            <!-- <div class="card"> -->
+          
+          
 
-      </div>
 <script>
     function choosing(c)
 {
