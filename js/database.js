@@ -40,28 +40,6 @@ if (document.title == "Quiz") {
 }
 
 if (document.title == "Bulletin Homepage") {
-  // function bar(d) {
-  //   console.log(d)
-  //   var data = [10, 15, 8];
-
-  //   new RGraph.Bar({
-  //     id: "cvs",
-  //     data: data,
-  //     options: {
-  //       backgroundGridHlines: false,
-  //       backgroundGridVlines: false,
-  //       backgroundGridBorder: false,
-  //       yaxis: false,
-  //       xaxis: false,
-  //       colors: ["#552586"],
-  //       textSize: 24,
-  //       xaxisLabels: "",
-  //       yaxisLabelsColor: "rgba(235, 216, 195, 1)",
-  //       labelsAbove: true,
-  //       labelsAboveSpecific: d,
-  //       // labelsAboveBackground: 'rgb(253,253,0)'
-  //     },
-  //   }).draw();
   getAllInputs();
   document.getElementById("products").addEventListener("change", getAllInputs);
   function getAllInputs() {
@@ -75,16 +53,14 @@ if (document.title == "Bulletin Homepage") {
             params: {
               text: Object.values(data).join(" "),
               // backgroundColor: 'white'
+              width: Number(window.innerWidth/2)
             },
           })
           .then((response) => {
-            // console.log(Object.values(data).join(" "))
-            // console.log(response.data)
             document.getElementById("results").innerHTML = response.data;
             var cnt = 0;
             for (let elem of document.getElementById("results").children[0]
               .children) {
-              console.log(elem.getAttribute("font-size"));
               if (cnt < 3) {
                 top3.push(elem.textContent);
                 cnt += 1;
@@ -96,25 +72,12 @@ if (document.title == "Bulletin Homepage") {
             // bar(["🥈"+top3[1], "🥇"+top3[0], "🥉"+top3[2]])
           })
           .catch((error) => {
-            console.log(error.message);
+            // console.log(error.message);
           });
       }
     });
   }
 }
-
-// if (document.title == "Register") {
-//   document.getElementById("regis").addEventListener("click", register);
-//   function register() {
-//     set(ref(db, "users/" + document.getElementById("username").value), {
-//       username: document.getElementById("username").value,
-//       fetus_nickname: document.getElementById("fetus").value,
-//       duedate: document.getElementById("due").value,
-//       email: document.getElementById("email").value,
-//       password: document.getElementById("pw").value,
-//     });
-//   }
-// }
 
 if (document.title == "Login") {
   document.getElementById("login").addEventListener("click", validate);
@@ -143,11 +106,3 @@ if (document.title == "Login") {
   }
 }
 
-// if (document.title == "Calender"){
-//   function writeBooking() {
-//     push(
-//       ref(db, "calender/" + ), //user
-//       document.getElementById("inputField").value.toLowerCase() // booking
-//     );
-//   }
-// }

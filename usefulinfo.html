@@ -49,27 +49,31 @@
       </div>
     
       <div class="tag">  
-        <div class="row">
+        <div id="app" class="row">
           <div id="container-fluid" class="text-center">
 
 
             <div class="center">
 
               <div id="register">
-                <i id="progressButton" class="ion-android-arrow-forward next">></i>
+                <i id="progressButton" class="ion-android-arrow-forward next" @click="getInfo()">></i>
                 <div id="inputContainer">
                   <input list="displayCat" id="inputField" type="text" required />
                   <label id="inputLabel"></label>
      
-                      <div id="app">
-                      <datalist id="displayCat" style="margin-bottom:5vh;">
-                        <option v-for="(cat,index) in cats" class="category" v-bind:key="index" v-on:click="getInfo(index)">
-                          <div>      
+                      <div>
+                      <!-- <datalist id="displayCat" style="margin-bottom:5vh;"> -->
+                        <select id="displayCat" v-model="selectedCat">
+                          <option v-for="(cat,index) in cats" class="category" :value="cat.name">
+                          <!-- <div>       -->
                             <!-- getInfo function isnt called when option is clicked on, console.log doesnt show the information -->
                             {{ cat.name }}
-                          </div>
-                        </option>
-                      </datalist>
+                          <!-- </div> -->
+                          </option>
+                        </select>
+                        
+                        <!-- </option> -->
+                      <!-- </datalist> -->
                     </div>
                   
                 </div>

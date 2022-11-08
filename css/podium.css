@@ -1,5 +1,5 @@
 #podium0, #podium1, #podium2 {
-    width: 30vw;
+    width: auto;
 }
 #podium0 { /* gold */
   background: linear-gradient(to right,#BF953F, #FCF6BA, #B38728);
@@ -18,4 +18,15 @@ td {
     vertical-align: bottom;
     padding: 5px;
     text-align: center;
+}
+
+.tag {
+  opacity: 0;
+  transform: translate(0, 10vh);
+  transition: all 5s;
+}
+
+.tag.visible {
+  opacity: 1;
+  transform: translate(0, 0);
 }
