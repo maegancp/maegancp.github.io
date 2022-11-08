@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./css/styleM.css" />
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="css/styleM.css">
      <!-- for icons in footer -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -37,6 +37,48 @@
                   </ul>
                   </div>
           </nav>
+          <div class="container md-3">
+          <h3>Account Summary</h3>
+                    <hr />
+            
+                <h3>First Name:</h3>
+                <h4></h4>
+
+                <h3>Last Name:</h3>
+                <h4> </h4>
+
+                <h3>Username:</h3>
+                <h4>@ViewData["username"]</h4>
+
+                <h3>Phone Number:</h3>
+                <h4>@ViewData["phonenumber"]</h4>
+
+                <h3>Email:</h3>
+                <h4>@ViewData["email"]</h4>
+            </div>
+<!-- <script>
+          // Initialize Firebase Auth
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        mFirebaseUser = mFirebaseAuth.getCurrentUser();
+        if (mFirebaseUser == null) {
+            // Not signed in, launch the Sign In activity
+            startActivity(new Intent(this, PhoneAuthActivity.class));
+            finish();
+            return;
+        } else {
+            mUsername = mFirebaseUser.getDisplayName();
+            if (mFirebaseUser.getPhotoUrl() != null) {
+                mPhotoUrl = mFirebaseUser.getPhotoUrl().toString();
+            }
+        }
+
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+        mSignInClient = GoogleSignIn.getClient(this, gso);
+    </script> -->
+
           <div class="row">
             <footer class="footer">
               <div class="container-fluid" style="text-align:center;">
