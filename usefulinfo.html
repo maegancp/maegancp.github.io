@@ -63,7 +63,7 @@
      
                       <div id="app">
                       <datalist id="displayCat" style="margin-bottom:5vh;">
-                        <option v-for="(cat,index) in cats" class="category" v-bind:key="index" v-on:click.native="getInfo(index)">
+                        <option v-for="(cat,index) in cats" class="category" v-bind:key="index" v-on:click="getInfo(index)">
                           <div>      
                             <!-- getInfo function isnt called when option is clicked on, console.log doesnt show the information -->
                             {{ cat.name }}
