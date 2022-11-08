@@ -127,7 +127,7 @@ MAGIC
 }
 
 #backgroundpic {
-  background-image: url(../img/4.svg);
+  background-image: url(../img/4.svg);z
   -webkit-transform: translate3d( 0, 0, -11500px) scale(16);
      -moz-transform: translate3d( 0, 0, -11500px) scale(16);
       -ms-transform: translate3d( 0, 0, -11500px) scale(16);

@@ -104,18 +104,28 @@ const app = Vue.createApp({
                 {name:'Your body after the birth', link:'https://api.nhs.uk/pregnancy/labour-and-birth/after-the-birth/your-body/'}
             ], 
 
-            selectedCat: null
+            selectedCat: ''
         }},
 
     methods: {
-        getInfo(index) {
+        getInfo() {
             // this function doesnt appear to be called when the user clicks on the category in search bar
             // information to be displayed where id='display' in html file 
-            console.log("test")
-            url = this.cats[index].link;
+            for (c of this.cats){
+                if (c.name == this.selectedCat){
+                    var url = c.link
+                }
+            }
+            // url = this.cats[this.selectedCat].link;
             console.log("url: " + url) ;
-
-            axios.get(url)
+            var token = localStorage.getItem("token")
+            
+            axios({
+                method: 'get',
+                url: 'https://cors-anywhere.herokuapp.com/'+url+'?subscription-key=3c2c1520913f45709b419baed4635a8e',
+                headers: {Authorization: `Bearer ${token}`}
+            })
+            // axios.get('https://cors-anywhere.herokuapp.com/'+url+'?subscription-key=3c2c1520913f45709b419baed4635a8e', headers: {'Origin': 'https://example.com'})
 
             .then(response => {
                 toDisplay = `<h2>${this.cats[index].name}</h2><br>` ; 
