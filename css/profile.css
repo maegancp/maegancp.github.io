@@ -121,16 +121,14 @@ body {
     padding-bottom: 16px;
   }
   
-  p {
+  /* p {
     font-family: 'Work Sans', sans-serif;
     color: #535353;
     margin: 32px 0;
-  }
+  } */
   
   
-  .footer {
-    padding-top: 60px;
-  }
+
   
   .header {
     text-align: right;

@@ -30,3 +30,8 @@ td {
   opacity: 1;
   transform: translate(0, 0);
 }
+
+select {
+  width:50% ; 
+  text-align: center;
+}
