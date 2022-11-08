@@ -56,7 +56,14 @@ main {
   transition: 0.8s ease-in-out;
 }
 
-form {
+input[type=date]:required:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+input[type=date]:focus::-webkit-datetime-edit {
+  color: black !important;
+}
+
+.form {
   max-width: 260px;
   width: 100%;
   margin: 0 auto;
@@ -69,7 +76,7 @@ form {
   transition: opacity 0.02s 0.4s;
 }
 
-form.sign-up-form {
+.form.sign-up-form {
   opacity: 0;
   pointer-events: none;
 }
@@ -188,12 +195,12 @@ label {
   color: rosybrown;
 }
 
-main.sign-up-mode form.sign-in-form {
+main.sign-up-mode .form.sign-in-form {
   opacity: 0;
   pointer-events: none;
 }
 
-main.sign-up-mode form.sign-up-form {
+main.sign-up-mode .form.sign-up-form {
   opacity: 1;
   pointer-events: all;
 }
@@ -323,7 +330,7 @@ main.sign-up-mode .carousel {
     height: auto;
   }
 
-  form {
+  .form {
     max-width: revert;
     padding: 1.5rem 2.5rem 2rem;
     transition: transform 0.8s ease-in-out, opacity 0.45s linear;
@@ -333,15 +340,15 @@ main.sign-up-mode .carousel {
     margin: 2rem 0;
   }
 
-  form.sign-up-form {
+  .form.sign-up-form {
     transform: translateX(100%);
   }
 
-  main.sign-up-mode form.sign-in-form {
+  main.sign-up-mode .form.sign-in-form {
     transform: translateX(-100%);
   }
 
-  main.sign-up-mode form.sign-up-form {
+  main.sign-up-mode .form.sign-up-form {
     transform: translateX(0%);
   }
 
@@ -388,7 +395,7 @@ main.sign-up-mode .carousel {
     font-size: 1.2rem;
   }
 
-  form {
+  .form {
     padding: 1rem 2rem 1.5rem;
   }
 }

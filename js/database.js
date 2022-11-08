@@ -124,7 +124,7 @@ if (document.title == "Login") {
     onValue(ref(db, "users/" + username), (snapshot) => {
       var data = snapshot.val();
       if (data != null && data.password == password) {
-        alert("Good!");
+        document.location.href = 'homepage.html'
       } else {
         alert("Username/Password entered is invalid");
       }
@@ -139,6 +139,7 @@ if (document.title == "Login") {
       email: document.getElementById("email").value,
       password: document.getElementById("pw").value,
     });
+    document.location.href = 'index.html'
   }
 }
 
