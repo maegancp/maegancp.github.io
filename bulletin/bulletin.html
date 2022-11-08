@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="../css/quiz.css">
+     <!-- <link rel="stylesheet" href="../css/styleM.css"> -->
     <title>Bulletin Homepage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
@@ -37,37 +37,39 @@
           </ul>
   </nav>
 
-      <div class="body">
-          <div class="textbox1">
-                <h1 class="row">Share with our community!</h1>
-                <p class="'row">Let us create a cohesive community by sharing our advices. Check poll results at the <a href="bulletinresult.html">bulletin</a>!</p>
+      <!-- <div class="body"> -->
+          <div class="textbox1" style="text-align:center;">
+                <h1>Share with our community</h1>
+                <p>Contribute to our community by participating in our polls and recommending your favourite products. </p>
+                <button type="button" class="button"><a href="bulletinresult.html" style="color:white; text-decoration:none; margin-bottom:10vh;">Poll Results</a></button>
           </div>
           <div class="container-fluid" id="app">
                 <h3>Baby Products</h3>
-                <div class="row page_content m-0">
+                <div class="row pageContent center">
           
-                    <div class="card col-4">
+                    <div class="card1 card col-3">
                         <div class="content">
                             <h2 class="title"> Baby Pacifier</h2>
                             <button class="btnn" onclick="choosing('babypacifier')">take a poll</button>
                         </div>
                     </div>
-                    <div class="card col-4">
+                    <div class="card1 card col-3">
                         <div class="content">
                             <h2 class="title">Milk Bottle</h2>
                             <button class="btnn" onclick="choosing('milkbottle')">take a poll</button>
                         </div>
                     </div>
-                    <div class="card col-4">
+                    <div class="card1 card col-3">
                         <div class="content">
                             <h2 class="title">Pram</h2>
                             <button class="btnn" onclick="choosing('pram')">take a poll</button>
                         </div>
                     </div>
                 </div>
+
                 <h3>Body Care</h3>
-                <div class="row page_content m-0">
-                    <div class="card col-4">
+                <div class="row pageContent center">
+                    <div class="card2 card col-3">
                         <div class="content">
                             <h2 class="title">Stretch Marks</h2>
                             <button class="btnn" onclick="choosing('stretchmark')">take a poll</button>
@@ -75,24 +77,69 @@
                         <!-- <img src="../img/stretch marks.png" alt="stretchmark" onclick="choosing('stretchmark')"> <br>
                         <a href="quiz.html?topic=stretchmark">Stretch Mark</a>  -->
                     </div>
-                    <div class="card col-4">
+                    <div class="card2 card col-3">
                         <div class="content">
-                            <h2 class="title">Vitamin</h2>
+                            <h2 class="title">Vitamins</h2>
                             <button class="btnn" onclick="choosing('vitamin')">take a poll</button>
                         </div>
-                        <img src="../img/vitamins.png" alt="vitamin" onclick="choosing('vitamin')"> <br> <a href="quiz.html?topic=vitamin">Vitamin</a>
+                        <!-- <img src="../img/vitamins.png" alt="vitamin" onclick="choosing('vitamin')"> <br> <a href="quiz.html?topic=vitamin">Vitamins</a> -->
                     </div>
-                    <img src="../img/vitamins.png" alt="vitamin" onclick="choosing('vitamin')"> <br> <a href="quiz.html?topic=vitamin">Vitamin</a> 
-                </div>
-                <div class="card col-4">
+                    <!-- <img src="../img/vitamins.png" alt="vitamin" onclick="choosing('vitamin')"> <br> <a href="quiz.html?topic=vitamin">Vitamin</a>  -->
+                
+                <div class="card2 card col-3">
                     <div class="content">
-                        <h2 class="title">Body Oil</h2>
+                        <h2 class="title">Body Oils</h2>
                         <button class="btnn" onclick="choosing('bodyoil')">take a poll</button>
                     </div>
                 </div>
+                </div>
+
+                <div class="row">
+                    <footer class="footer">
+                      <div class="container-fluid" style="text-align:center;">
+                        
+                          <div class="row" >
+                            <div class="col-sm-2 pb-4"><img src= '../img/logo2.png' style="width: 125px;margin:auto;"></div>
+                              <div class="col-sm-3">
+                                
+              
+                                  <ul class="list-unstyled" >
+                                      <li><a href="">Team</a></li>
+                                      <li><a href="">Legal Terms</a></li>
+                                      <li><a href="">Support</a></li>
+                                  </ul>
+              
+                                    <span class="nav-item"><a href="" class="nav-link"><i class="fa fa-facebook fa-lg"></i></a></span>
+                                    <span class="nav-item"><a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></span>
+                                    <span class="nav-item"><a href="" class="nav-link"><i class="fa fa-github fa-lg"></i></a></span>
+                                    <span class="nav-item"><a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></span>
+              
+                                  <!-- <div class="row mt-5"> -->
+                                    <p class="m-4 contactUs text-center">© PREPnancy 2022</p>
+                                  <!-- </div> -->
+              
+                              </div>
+                              <div class="col-sm-7">
+                                  <h6 class="contactUs">Contact Us</h6>
+                                  <form class="mb-0">
+                                    <fieldset class="form-group mb-2">
+                                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                    </fieldset>
+                                    <fieldset class="form-group mb-2">
+                                        <textarea class="form-control" id="exampleMessage" placeholder="Message"></textarea>
+                                    </fieldset>
+                                    <fieldset class="form-group">
+                                        <button type="button" class="button">Send</button>
+                                    </fieldset>
+                                </form>
+                              </div>                
+                            </div>
+                          </div>
+                  </footer>
+                  </div>
             </div>
-            </div>
-                <br>
+            <!-- </div> -->
+                <!-- <br> -->
             <!-- <div class="card"> -->
           
           
