@@ -26,6 +26,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@400;700&family=Work+Sans:wght@400;700&display=swap"
     rel="stylesheet">
+    <!-- Vue 3 -->
+    <script src='https://cdn.jsdelivr.net/npm/vue@next'></script>
+    <script src="/js/database.js" type="module"></script>
 </head>
 
 <body>
@@ -60,32 +63,33 @@
 
                 <div id="app" class="actual-form mx-auto">
                   <div class="input-wrap">
-                    <input type="text" minlength="4" class="input-field" autocomplete="off" required id="username" disabled />
+                    <input type="text" minlength="4" class="input-field" autocomplete="off" required id="username" readonly />
                     <label>Username</label>
                   </div>
 
                   <div class="input-wrap">
-                    <input type="text" class="input-field" autocomplete="off" required id="fetus" disabled />
+                    <input type="text" class="input-field" autocomplete="off" required id="fetus" readonly />
                     <label>Fetus Nickname</label>
                   </div>
 
                   <div class="input-wrap">
-                    <input type="date" minlength="4" class="input-field" autocomplete="off" required id="due" disabled />
+                    <input type="date" minlength="4" class="input-field" autocomplete="off" required id="due" readonly />
                     <label>Baby Due Date</label>
                   </div>
 
                   <div class="input-wrap">
-                    <input type="email" minlength="4" class="input-field" autocomplete="off" required id="email" disabled />
+                    <input type="email" minlength="4" class="input-field" autocomplete="off" required id="email" readonly />
                     <label>Email</label>
                   </div>
 
                   <div class="input-wrap">
-                    <input type="password" minlength="4" class="input-field" autocomplete="off" required id="pw" disabled />
+                    <input type="password" minlength="4" class="input-field" autocomplete="off" required id="pw" readonly />
                     <label>Password</label>
                   </div>
 
-                  <input type="submit" value="Edit Profile" id="regis" class="sign-btn" />
+                  <button id="edit" class="sign-btn"> Edit Profile </button>
                 </div>
+                <div id="updated" class="success text-center"></div>
               </div>
             </div>
           </div>

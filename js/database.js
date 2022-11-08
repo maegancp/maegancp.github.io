@@ -39,7 +39,7 @@ if (document.title == "Quiz") {
   }
 }
 
-if (document.title == "Bulletin Homepage") {
+if (document.title == "Community Contributions") {
   getAllInputs();
   document.getElementById("products").addEventListener("change", getAllInputs);
   function getAllInputs() {
@@ -88,6 +88,7 @@ if (document.title == "Login") {
       var data = snapshot.val();
       if (data != null && data.password == password) {
         document.location.href = 'homepage.html'
+        sessionStorage.setItem("username", username);
       } else {
         alert("Username/Password entered is invalid");
       }
@@ -106,3 +107,48 @@ if (document.title == "Login") {
   }
 }
 
+if (document.title == "Profile"){
+  var user = sessionStorage.getItem("username")
+  function displayInfo() {
+    onValue(ref(db, "users/" + user), (snapshot) => {
+    var data = snapshot.val();
+    document.getElementById('username').setAttribute('value',user)
+    document.getElementById('fetus').setAttribute('value',data.fetus_nickname)
+    document.getElementById('due').setAttribute('value',data.duedate)
+    document.getElementById('email').setAttribute('value',data.email)
+    document.getElementById('pw').setAttribute('value',data.password)
+  })
+  }
+  displayInfo()
+  document.getElementsByTagName('button')[0].addEventListener('click',edit)
+  function edit() {
+    document.getElementsByTagName('button')[0].removeEventListener('click',edit)
+    document.getElementsByTagName('button')[0].innerText = "Save"
+    var inputs = document.querySelectorAll(".input-field");
+    inputs.forEach((inp) => {
+      inp.removeAttribute('readonly');
+    });
+    document.getElementsByTagName('button')[0].addEventListener('click',save)
+  }
+  function save(){
+    document.getElementsByTagName('button')[0].removeEventListener('click',save)
+    set(ref(db, "users/" + document.getElementById("username").value), {
+      username: document.getElementById("username").value,
+      fetus_nickname: document.getElementById("fetus").value,
+      duedate: document.getElementById("due").value,
+      email: document.getElementById("email").value,
+      password: document.getElementById("pw").value,
+    })
+    sessionStorage.setItem("username", username)
+    var user = sessionStorage.getItem("username")
+    displayInfo()
+    document.getElementsByTagName('button')[0].innerText='Edit Profile'
+    var inputs = document.querySelectorAll(".input-field");
+    inputs.forEach((inp) => {
+      inp.setAttribute('readonly','')
+    })
+    document.getElementById('updated').innerText = 'Information Updated Successfully'
+    document.getElementsByTagName('button')[0].addEventListener('click',edit)
+  }
+  
+}

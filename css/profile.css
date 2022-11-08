@@ -2,6 +2,10 @@ body {
     background-color: #FAFAFA;
   }
   
+  .success {
+    background-color: rgba(95, 158, 160, 0.418);
+  }
+
   .main-container {
     width: 800px;
     margin: 0 auto;
