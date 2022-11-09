@@ -9,7 +9,7 @@
 
   progressButton.addEventListener("click", validate);
   inputField.addEventListener("keyup", function (e) {
-    transform(0, 0); // ie hack to redraw
+    transform(0, 0);
     if (e.keyCode == 13) validate();
   });
 
