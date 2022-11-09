@@ -172,7 +172,7 @@ footer .form-control {
 }
 
 .before {
-  margin-bottom: 100px;
+  margin-bottom: 10vh;
 }
 
 .contactUs {
@@ -200,8 +200,8 @@ footer .form-control {
 }
 
 .center {
-  margin-top: 30vh;
-  margin-bottom: 30vh ; 
+  margin-top: 20vh;
+  margin-bottom: 20vh ; 
   display: flex;
   justify-content: center;
   align-items: center;

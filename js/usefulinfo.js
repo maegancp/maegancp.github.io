@@ -18,12 +18,16 @@ searchInput.addEventListener("keyup", (event) => {
         if (name.includes(searchQuery)) {
             // found name matching search, display it
             nameElement.style.display = "block";
+            // nameElement.hidden = true;
         } else {
             // no match, don't display name
             nameElement.style.display = "none";
+            // nameElement.hidden = false;
         }
     }
 });
+
+
 
 const displayInfo = document.getElementById("displayCat") ; 
 
@@ -86,6 +90,7 @@ displayInfo.addEventListener("click", (event) => {
 const app = Vue.createApp({
     data() {
         return {
+            optionVal: "",
             cats : [
                 {name: 'Signs and symptoms of pregnancy', link:"https://api.nhs.uk/pregnancy/trying-for-a-baby/signs-and-symptoms-of-pregnancy/" },
                 {name: 'Planning your pregnancy', link: 'https://api.nhs.uk/pregnancy/trying-for-a-baby/signs-and-symptoms-of-pregnancy/'},
@@ -111,11 +116,14 @@ const app = Vue.createApp({
         getInfo() {
             // this function doesnt appear to be called when the user clicks on the category in search bar
             // information to be displayed where id='display' in html file 
+            console.log(this.selectedCat);
             for (c of this.cats){
                 if (c.name == this.selectedCat){
                     var url = c.link
                 }
             }
+            toDisplay = `<h2>${this.selectedCat}</h2><br>` ; 
+            document.getElementById("display").innerHTML = toDisplay;
             // url = this.cats[this.selectedCat].link;
             console.log("url: " + url) ;
             var token = localStorage.getItem("token")
@@ -128,7 +136,7 @@ const app = Vue.createApp({
             // axios.get('https://cors-anywhere.herokuapp.com/'+url+'?subscription-key=3c2c1520913f45709b419baed4635a8e', headers: {'Origin': 'https://example.com'})
 
             .then(response => {
-                toDisplay = `<h2>${this.cats[index].name}</h2><br>` ; 
+                
                 for (obj in response.data["mainEntityOfPage"]) {
                     toDisplay += "<h3>" + response.data["mainEntityOfPage"][obj]["mainEntityOfPage"][0]["headline"] + "</h3><br>" + response.data["mainEntityOfPage"][obj]["mainEntityOfPage"][0]["text"] ;
                 }
@@ -138,7 +146,15 @@ const app = Vue.createApp({
             .catch(error => {
                 console.log(error);
             })
-        }
+        }, 
+
+        saveSelectionAndReset(e) {
+            let val = e.target.value;
+            if (val) {
+              this.optionVal = val;
+            }
+            e.target.value = "";
+          }
     }
 
         }).mount("#app")
