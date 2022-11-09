@@ -9,9 +9,13 @@ textarea {
     color: #222;
 }
 
+
 body {
     font-size: 1em;
     line-height: 1.4;
+    overflow: hidden;
+    /* prevent scrolling */
+    background: linear-gradient(to right, #f5ffd8, #ffe2da, #f2eeeb);
 }
 
 /*
@@ -20,56 +24,10 @@ body {
  * Customize the background color to match your design.
  */
 
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-/*
- * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
- */
 
 img {
     vertical-align: middle;
 }
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
-}
-
-
 
 /********************
 BASE STYLING
@@ -77,12 +35,7 @@ BASE STYLING
 
 html, body {
   height: 100%;
-}
-
-#content {
-  position: absolute;
-  width: 100%;
-  height: 100%; 
+  width:100%
 }
 
 body {
@@ -95,68 +48,49 @@ body {
 MAGIC
 ********************/
 
-#scroll-proxy { height: 4000px; }
 
-#content section {
+#content{
   width: 100%;
   height: 100%;
   position: absolute;
   background-size: 100%;
   background-color: transparent;
-  background-position: center bottom;
+  background-position: 100% 0;
   background-repeat: no-repeat;
 }
 
-#environment {
-  position: fixed;
-  width: 100%;
+
+.backgroundpic {
+  background-image: url(../img/4.svg);
+  width: 100%; 
   height: 100%;
-  -webkit-perspective: 800px;
-     -moz-perspective: 800px;
-      -ms-perspective: 800px;
-       -o-perspective: 800px;
-          perspective: 800px;
+  background-size:100%;
+  position: absolute;
 }
 
-#content {
-  -webkit-transform-style: preserve-3d;
-     -moz-transform-style: preserve-3d;
-      -ms-transform-style: preserve-3d;
-       -o-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
-
-#backgroundpic {
-  background-image: url(../img/4.svg);z
-  -webkit-transform: translate3d( 0, 0, -11500px) scale(16);
-     -moz-transform: translate3d( 0, 0, -11500px) scale(16);
-      -ms-transform: translate3d( 0, 0, -11500px) scale(16);
-       -o-transform: translate3d( 0, 0, -11500px) scale(16);
-          transform: translate3d( 0, 0, -11500px) scale(16);
-}
 .bulletinhouse{
   position: absolute;
-  top: 65%;
-  width: 95%;
+  top: 55%;
+  left: 45%;
   text-align: center;
   font-size: 18px;
 }
 .calendarhouse{
   position: absolute;
-  bottom: 20px;
-  left: 230px;
+  bottom: 15%;
+  left: 20%;
   font-size: 18px;
 }
 .profilehouse{
   position: absolute;
-  top: 50%;
+  top: 40%;
   right: 25%;
   font-size: 18px;
 }
 .infohubhouse{
   position: absolute;
-  bottom: 8px;
-  right: 23%;
+  bottom: 10%;
+  right: 21%;
   font-size: 18px;
 }
 .btn1{
