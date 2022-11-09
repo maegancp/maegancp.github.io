@@ -58,31 +58,44 @@
               <div id="register">
                 <i id="progressButton" class="ion-android-arrow-forward next" @click="getInfo()">></i>
                 <div id="inputContainer">
-                  <input list="displayCat" id="inputField" type="text" required />
+                  <input class="form-control" list="displayCat" id="inputField" type="search" @keydown.enter="getInfo()"
+                  v-model="selectedCat" required />
                   <label id="inputLabel"></label>
      
-                      <div>
-                      <!-- <datalist id="displayCat" style="margin-bottom:5vh;"> -->
-                        <select id="displayCat" v-model="selectedCat">
+                      <datalist id="displayCat" style="margin-bottom:5vh;">
+                        <!-- <select id="displayCat" v-model="selectedCat"> -->
                           <option v-for="(cat,index) in cats" class="category" :value="cat.name">
-                          <!-- <div>       -->
-                            <!-- getInfo function isnt called when option is clicked on, console.log doesnt show the information -->
+
                             {{ cat.name }}
-                          <!-- </div> -->
+
                           </option>
-                        </select>
+                        <!-- </select> -->
                         
                         <!-- </option> -->
-                      <!-- </datalist> -->
-                    </div>
+                      </datalist>
+                    <!-- </div> -->
+
+                    <!-- <div class="input-group">
+                      <input type="text" class="form-control " placeholder="username">
+                      <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle"
+                          data-toggle="dropdown">
+                          Dropdown <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Dropdown link</a></li>
+                          <li><a href="#">Dropdown link</a></li>
+                        </ul>
+                      </div>
+                    </div> -->
                   
                 </div>
               </div>
             </div>
 
             <div id="display" style="margin-bottom:15vh;">
-              <h2>Headline</h2>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus harum assumenda unde earum ipsum inventore voluptatem eos, dolor quisquam debitis nostrum similique nisi numquam consequuntur quibusdam molestias quam beatae maxime?</p>
+              <!-- <h2>Headline</h2> -->
+              <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus harum assumenda unde earum ipsum inventore voluptatem eos, dolor quisquam debitis nostrum similique nisi numquam consequuntur quibusdam molestias quam beatae maxime?</p> -->
             </div>
 
             
