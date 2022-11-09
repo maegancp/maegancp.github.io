@@ -94,9 +94,10 @@ if (document.title == "Login") {
       }
     });
   }
-  document.getElementById("regis").addEventListener("click", register);
+  regis.addEventListener("click", register);
   function register() {
-    set(ref(db, "users/" + document.getElementById("susername").value), {
+    push(
+      ref(db, "users/" + document.getElementById("susername").value), {
       username: document.getElementById("susername").value,
       fetus_nickname: document.getElementById("fetus").value,
       duedate: document.getElementById("due").value,
