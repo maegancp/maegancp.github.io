@@ -313,3 +313,11 @@ h2  {
     color: rgb(65, 62, 62);
     text-align: center;
   }
+
+ #display li {
+    text-align:left;
+  }
+
+  h5 {
+    margin-bottom: 3px;
+  }
