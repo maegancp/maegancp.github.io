@@ -51,14 +51,15 @@ p{
   top: 30vh;
   left: 35vw;
 }
+
 .calendarhouse{
   position: absolute;
-  top:50vh;
+  top:60vh;
   left:6vw;
 } 
 .profilehouse{
   position: absolute;
-  top: 16vh;
+  top: 20vh;
   left:60vw;
  
 }
