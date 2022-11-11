@@ -33,7 +33,7 @@ if (document.title == "Quiz") {
   });
   function writeInput() {
     push(
-      ref(db, "quiz/" + document.location.href.split("?")[1].split("=")[1]),
+      ref(db, "quiz/" + document.location.href.split("?")[1].split("=")[1].replace('%20','')),
       document.getElementById("inputField").value.toLowerCase()
     );
   }
@@ -86,7 +86,6 @@ if (document.title == "Login") {
     var password = document.getElementById("password").value;
     onValue(ref(db, "users/" + username), (snapshot) => {
       var data = snapshot.val();
-      console.log(data)
       var userdata = data[Object.keys(data)[0]]
       if (data != null && userdata.password == password) {
         document.location.href = 'homepage.html'
@@ -117,10 +116,10 @@ if (document.title == "Profile"){
     onValue(ref(db, "users/" + user), (snapshot) => {
     var data = snapshot.val();
     document.getElementById('username').setAttribute('value',user)
-    document.getElementById('fetus').setAttribute('value',data.fetus_nickname)
-    document.getElementById('due').setAttribute('value',data.duedate)
-    document.getElementById('email').setAttribute('value',data.email)
-    document.getElementById('pw').setAttribute('value',data.password)
+    document.getElementById('fetus').setAttribute('value',data[Object.keys(data)[0]].fetus_nickname)
+    document.getElementById('due').setAttribute('value',data[Object.keys(data)[0]].duedate)
+    document.getElementById('email').setAttribute('value',data[Object.keys(data)[0]].email)
+    document.getElementById('pw').setAttribute('value',data[Object.keys(data)[0]].password)
   })
   }
   displayInfo()
