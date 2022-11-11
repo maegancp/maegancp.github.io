@@ -12,14 +12,23 @@ textarea {
 
 body {
     font-size: 1em;
+    height: 100%;
+    width:100%;
+    overflow:hidden;
     line-height: 1.4;
-    overflow: hidden;
-    /* prevent scrolling */
     background: linear-gradient(to right, #f5ffd8, #ffe2da, #f2eeeb);
 }
 
 p{
-  background-color:#D9FCFF;
+  background-color:#D4FAFA;
+  position:fixed;
+  color:black;
+  font-weight:bold;
+  bottom:0;
+  margin:auto;
+  padding:10px;
+  border-style:double;
+  border-color:pink;
 }
 
 /*
@@ -29,54 +38,21 @@ p{
  */
 
 
-img {
-    vertical-align: middle;
-}
-
-/********************
-BASE STYLING
-********************/
-
-html, body {
-  height: 100%;
-  width:100%
-}
-
-body {
-  background: #D9FCFF;
-}
-
-
-
-/********************
-MAGIC
-********************/
-
-
-#content{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-size: 100%;
-  background-color: transparent;
-  background-position: 100% 0;
-  background-repeat: no-repeat;
-}
-
-
 .backgroundpic {
   background-image: url(../img/4.svg);
+  background-repeat: no-repeat;
   width: 100%; 
   height: 100%;
   background-size:100%;
   position: absolute;
+  background-color: #b9e38d;
+  z-index:-1
 }
 
 .bulletinhouse{
   position: absolute;
   top: 55%;
   left: 45%;
-  text-align: center;
   font-size: 18px;
 }
 .calendarhouse{
@@ -84,19 +60,19 @@ MAGIC
   bottom: 15%;
   left: 20%;
   font-size: 18px;
-}
+} 
 .profilehouse{
   position: absolute;
   top: 40%;
   right: 25%;
   font-size: 18px;
 }
-.infohubhouse{
+ .infohubhouse{
   position: absolute;
   bottom: 10%;
   right: 21%;
   font-size: 18px;
-}
+} 
 .btn1{
   background-color: rgba(88, 60, 60, 0.907);
   border: none;
