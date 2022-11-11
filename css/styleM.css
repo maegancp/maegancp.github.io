@@ -4,7 +4,11 @@ body {
     border-radius: 6px;
     height: 120px;
     font-family: 'Mulish', sans-serif;
-    margin: 10px
+    /* margin: 10px */
+}
+
+.container-fluid {
+  padding: 0px;
 }
 
 section {
@@ -16,6 +20,7 @@ section {
   opacity: 0;
   transform: translate(0, 10vh);
   transition: all 5s;
+  padding: 12px;
 }
 
 .tag.visible {

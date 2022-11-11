@@ -86,8 +86,7 @@ if (document.title == "Login") {
     var password = document.getElementById("password").value;
     onValue(ref(db, "users/" + username), (snapshot) => {
       var data = snapshot.val();
-      var userdata = data[Object.keys(data)[0]]
-      if (data != null && userdata.password == password) {
+      if (data != null && data.password == password) {
         document.location.href = 'homepage.html'
         sessionStorage.setItem("username", username);
       } else {
@@ -104,7 +103,7 @@ if (document.title == "Login") {
       'email': document.getElementById("email").value,
       'password': document.getElementById("pw").value
     }
-    push(
+    set(
       ref(db, "users/" + document.getElementById("susername").value), details );
       main.classList.toggle("sign-up-mode")
   }
@@ -112,14 +111,15 @@ if (document.title == "Login") {
 
 if (document.title == "Profile"){
   var user = sessionStorage.getItem("username")
+  console.log(sessionStorage.getItem("username"))
   function displayInfo() {
     onValue(ref(db, "users/" + user), (snapshot) => {
     var data = snapshot.val();
     document.getElementById('username').setAttribute('value',user)
-    document.getElementById('fetus').setAttribute('value',data[Object.keys(data)[0]].fetus_nickname)
-    document.getElementById('due').setAttribute('value',data[Object.keys(data)[0]].duedate)
-    document.getElementById('email').setAttribute('value',data[Object.keys(data)[0]].email)
-    document.getElementById('pw').setAttribute('value',data[Object.keys(data)[0]].password)
+    document.getElementById('fetus').setAttribute('value',data.fetus_nickname)
+    document.getElementById('due').setAttribute('value',data.duedate)
+    document.getElementById('email').setAttribute('value',data.email)
+    document.getElementById('pw').setAttribute('value',data.password)
   })
   }
   displayInfo()
@@ -142,8 +142,7 @@ if (document.title == "Profile"){
       email: document.getElementById("email").value,
       password: document.getElementById("pw").value,
     })
-    sessionStorage.setItem("username", username)
-    var user = sessionStorage.getItem("username")
+    sessionStorage.setItem("username", document.getElementById("username").value)
     displayInfo()
     document.getElementsByTagName('button')[0].innerText='Edit Profile'
     var inputs = document.querySelectorAll(".input-field");
