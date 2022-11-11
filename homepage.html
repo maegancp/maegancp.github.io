@@ -27,6 +27,9 @@
   </head>
 
   <body>
+    <div class="d-flex justify-content-left">
+      <p>Click on the houses to access them !</p>
+    </div>
     <div class="backgroundpic">
       <nav class="navbar">
         <div class="container-fluid">
@@ -42,16 +45,22 @@
                 </li>
               </ul>
       </nav>
-      <div id="content">
-        <div class="bulletinhouse"><button onclick="location.href = './bulletin/bulletin.html';"class="btn btn--stripe">Enter</button></div>
-        <div class="calendarhouse"><button onclick="location.href = '/calendar/calendar.html';" class="btn btn--stripe">Enter</button></div>
-        <div class="profilehouse"><button onclick="location.href = '/profile.html';"class="btn btn--stripe">Enter</button></div>
-        <div class="infohubhouse"><button onclick="location.href = '/usefulinfo.html';"class="btn btn--stripe">Enter</button></div>
-      </div>
-      <div class="d-flex justify-content-center">
-        <p>Click on the houses to access them !</p>
+      <div id="content"> 
+        <div class="container-fluid">
+          <div class="row">
+            <div class="bulletinhouse col"><img onclick="location.href = '/bulletin/bulletin.html';" style="display:block; width:18vw" src="./img/house4u.png" alt=""></div>
+          </div>
+          <div class="row">
+            <div class="calendarhouse col"><img onclick="location.href = '/calendar/calendar.html';" style="display:block; width:18vw" src="./img/calendarhouse1.png" alt=""></div>
+          </div>
+          <div class="row">
+          <div class="profilehouse col"><img onclick="location.href = '/profile.html';" style="display:block; width:18vw" src="./img/housethree.png" alt="">
+          </div>
+          <div class="row">
+          <div class="infohubhouse col"><img onclick="location.href = '/usefulinfo.html';" style="display:block; width:18vw" src="./img/housetwo.png" alt=""><a</div>
         </div>
-
+        </div>
+      </div>
     </div>
     
 
