@@ -39,7 +39,7 @@ if (document.title == "Quiz") {
   }
 }
 
-if (document.title == "Community Contributions") {
+if (document.title == "Community Recommendations") {
   getAllInputs();
   document.getElementById("products").addEventListener("change", getAllInputs);
   function getAllInputs() {

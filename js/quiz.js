@@ -3,7 +3,7 @@
   var wTime = 200;
   var eTime = 1000;
 
-  inputLabel.innerText = "What brand do you use for "+ document.location.href.split('?')[1].split('=')[1]+'?';
+  inputLabel.innerText = "What brand do you use for "+ document.location.href.split('?')[1].split('=')[1].replace('%20',' ')+'?';
   inputField.focus();
   inputContainer.style.opacity = 1;
 
