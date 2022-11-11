@@ -356,3 +356,9 @@ h2  {
     font-size:3em;
     margin-top:0px;
   }
+
+  .profile {
+    font-family: 'Playfair Display', serif; 
+    color: rgb(65, 62, 62);
+    text-align: center;
+  }
