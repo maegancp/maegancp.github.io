@@ -114,6 +114,8 @@ nav ul li a:hover {
   margin: 0px;
   padding:0px; 
   overflow: hidden ; 
+  object-fit: cover;
+  width:100% ; 
 }
 
 h1 {
@@ -310,4 +312,12 @@ h2  {
     font-family: 'Playfair Display', serif;
     color: rgb(65, 62, 62);
     text-align: center;
+  }
+
+ #display li {
+    text-align:left;
+  }
+
+  h5 {
+    margin-bottom: 3px;
   }

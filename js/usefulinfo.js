@@ -138,7 +138,12 @@ const app = Vue.createApp({
             .then(response => {
                 
                 for (obj in response.data["mainEntityOfPage"]) {
-                    toDisplay += "<h3>" + response.data["mainEntityOfPage"][obj]["mainEntityOfPage"][0]["headline"] + "</h3><br>" + response.data["mainEntityOfPage"][obj]["mainEntityOfPage"][0]["text"] ;
+                    if (response.data["mainEntityOfPage"][obj]["mainEntityOfPage"][0]["text"].slice(0, 7) != '<video>' )
+                   { toDisplay += "<h3>" + response.data["mainEntityOfPage"][obj]["mainEntityOfPage"][0]["headline"] + "</h3><br>" 
+                   if (response.data["mainEntityOfPage"][obj]["headline"] != undefined) {
+                    toDisplay += "<h5 style='text-align:left'>" + response.data["mainEntityOfPage"][obj]["headline"] + "</h5><br>" 
+                }
+                toDisplay += response.data["mainEntityOfPage"][obj]["mainEntityOfPage"][0]["text"] ;}
                 }
                 document.getElementById("display").innerHTML = toDisplay;
             })

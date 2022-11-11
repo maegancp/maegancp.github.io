@@ -8,7 +8,6 @@ if (document.title != "Profile") {
   inputs.forEach((inp) => {
   inp.addEventListener("focus", () => {
     inp.classList.add("active");
-    
   });
   inp.addEventListener("blur", () => {
     if (inp.value != "") return;

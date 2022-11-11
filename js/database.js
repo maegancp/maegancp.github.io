@@ -86,7 +86,9 @@ if (document.title == "Login") {
     var password = document.getElementById("password").value;
     onValue(ref(db, "users/" + username), (snapshot) => {
       var data = snapshot.val();
-      if (data != null && data.password == password) {
+      console.log(data)
+      var userdata = data[Object.keys(data)[0]]
+      if (data != null && userdata.password == password) {
         document.location.href = 'homepage.html'
         sessionStorage.setItem("username", username);
       } else {
@@ -94,16 +96,18 @@ if (document.title == "Login") {
       }
     });
   }
-  document.getElementById("regis").addEventListener("click", register);
+  regis.addEventListener("click", register);
   function register() {
-    set(ref(db, "users/" + document.getElementById("susername").value), {
-      username: document.getElementById("susername").value,
-      fetus_nickname: document.getElementById("fetus").value,
-      duedate: document.getElementById("due").value,
-      email: document.getElementById("email").value,
-      password: document.getElementById("pw").value,
-    });
-    document.location.href = 'index.html'
+    var details = {
+      'username': document.getElementById("susername").value,
+      'fetus_nickname': document.getElementById("fetus").value,
+      'duedate': document.getElementById("due").value,
+      'email': document.getElementById("email").value,
+      'password': document.getElementById("pw").value
+    }
+    push(
+      ref(db, "users/" + document.getElementById("susername").value), details );
+      main.classList.toggle("sign-up-mode")
   }
 }
 
