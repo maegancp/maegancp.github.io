@@ -44,6 +44,7 @@ if (document.title == "Community Recommendations") {
     onValue(ref(db, "quiz/" + chosen), (snapshot) => {
       var data = snapshot.val();
       var top3 = [];
+      console.log(Object.values(data).join(" "))
       if (data != null) {
         axios
           .get("https://quickchart.io/wordcloud", {

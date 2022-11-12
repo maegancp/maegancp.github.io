@@ -1,6 +1,7 @@
 #podium0, #podium1, #podium2 {
-    width: 10vw;
+    width: 15vw;
     min-width: 110px;
+    text-align: center;
     /* overflow-wrap: break-word; */
 }
 #podium0 { /* gold */
@@ -34,7 +35,10 @@ td {
 }
 
 select {
-  width:50% ; 
+  width:80vw ; 
   text-align: center;
 }
 
+.form-select {
+  width: 100vw;
+}
