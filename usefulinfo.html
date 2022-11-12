@@ -64,7 +64,7 @@
      
                       <datalist id="displayCat" style="margin-bottom:15px;">
                         <!-- <select id="displayCat" v-model="selectedCat"> -->
-                          <option v-for="(cat,index) in cats" class="category" :value="cat.name">
+                          <option v-for="(cat,index) in cats" class="category" :value="cat.name" @click="getInfo()">
 
                             {{ cat.name }}
 

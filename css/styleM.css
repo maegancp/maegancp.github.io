@@ -340,8 +340,10 @@ h2  {
   }
 
   #display a {
-    color: rgb(143, 53, 104);
-    /* pointer-events: none; */
+    /* color: rgb(143, 53, 104); */
+    pointer-events: none;
+    text-decoration: none;
+    color:black;
   }
 
   #display a:hover {

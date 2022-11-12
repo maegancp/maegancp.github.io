@@ -43,7 +43,8 @@ body {
   height: 100%;
   background-size:100%;
   position: absolute;
-  background-color: #b9e38d;
+  /* background-color: #b9e38d; */
+  background-color: #b0dc7c;
 }
 
 .bulletinhouse{
