@@ -1,5 +1,7 @@
 #podium0, #podium1, #podium2 {
-    width: auto;
+    width: 10vw;
+    min-width: 110px;
+    /* overflow-wrap: break-word; */
 }
 #podium0 { /* gold */
   background: linear-gradient(to right,#e6be8a, #FCF6BA, #e6be8a);
