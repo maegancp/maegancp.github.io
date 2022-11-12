@@ -1,5 +1,5 @@
 "# wad2G3T6" 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/2f4fa768-5e0c-44fc-9b6a-baa37b89c513/deploy-status)](https://app.netlify.com/sites/prepnancy/deploys)
+<!-- [![Netlify Status](https://api.netlify.com/api/v1/badges/2f4fa768-5e0c-44fc-9b6a-baa37b89c513/deploy-status)](https://app.netlify.com/sites/prepnancy/deploys) -->
 
 Project Title: Prepnancy
 
@@ -8,7 +8,10 @@ Expectant mothers tend to face great uncertainties and increased levels of anxie
 
 Our objectives are: 1. To create a community where expectant mothers can share their preferences and help one another through recommendations 2. To assist users’ in keeping track of their important dates 3. To provide 24/7 chat support to expectant mothers for their medical queries
 
-Key functions: 1.Community Bulletin - take part in polls for pregnancy care related categories, community come together to exchange products recommendations advices. 2.Calendar - keep track of their pregnancy journey, medical appointments 3.Information Hub - answers users' questions related to pregnancy process
+Key functions: 
+1. Community Bulletin - take part in polls for pregnancy care related categories, community come together to exchange products recommendations advices. 
+2. Calendar - keep track of their pregnancy journey, medical appointments 
+3. Information Hub - answers users' questions related to pregnancy process
 
 How to install and run our application:
 <!-- if you are working on a project that a user needs to install or run locally in a machine like a "POS", you should include the steps required to install your project and also the required dependencies if any.
