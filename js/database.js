@@ -1,6 +1,3 @@
-// https://quickchart.io/documentation/word-cloud-api/ word cloud API
-//  https://www.rgraph.net/canvas/bar.html bargraph
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
 import {
   getDatabase,
