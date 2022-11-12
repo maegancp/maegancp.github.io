@@ -73,7 +73,7 @@ body {
 
 
 
-.image-hover-text 
+/* .image-hover-text 
 {
   position: absolute;
   bottom:0;
@@ -83,23 +83,26 @@ body {
   opacity: 0;
   cursor: default;
   transition: opacity 0.2s linear;
-}
-.image-hover-text:hover 
+} */
+/* .image-hover-text:hover 
 {
   opacity: 1;
-}
+} */
 
 
 .image-hover-text-bubble 
 {
-  position: relative;
+  position: absolute;
+  top:-10%;
+  left:10%;
+  z-index:100;
   width:160px;
-  height: 80px;
+  height: auto;
   text-align: center;
   font-family: 'Mulish', sans-serif;
   font-weight:bold;
   background: rgba(232, 206, 206, 0.9);
-  border: 1px solid #f1abab;
+  /* border: 1px solid #f1abab; */
   border-radius:10px;
   margin: 20 auto;
   padding: 0;
@@ -107,6 +110,7 @@ body {
   font-size: 17px;
   text-align: center;
   word-wrap: break-word;
+  opacity: 0;
 }
 
 .image-hover-text .image-hover-text-title
