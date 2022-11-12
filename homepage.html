@@ -12,6 +12,10 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="css/styleM.css" />
     <script src='https://cdn.jsdelivr.net/npm/vue@next'></script>
 
@@ -42,9 +46,13 @@
                 </li>
               </ul>
       </nav>
-      <p>Click on the houses to enter !</p>
-      <div id="content"> 
-        <div class="container-fluid">
+      
+      <div id="overlay" class="cover blur-in"> 
+        <div class="container-fluid content">
+          <div class="row">
+            <h2 class="profile animate__animated animate__fadeOut animate__delay-5s">Welcome</h2>
+            <h5 class="profile animate__animated animate__fadeOut animate__delay-5s" style="font-weight:normal">Click on the houses to explore!</h5>
+          </div>
           <div class="row">
             <!-- <div class="bulletinhouse col"> -->
               <img class="bulletinhouse " onclick="location.href = '/bulletin/bulletin.html';" style="display:block; width:18vw;" src="./img/house4u.png" alt="">
@@ -69,6 +77,15 @@
         </div>
       </div>
     </div>
+
+    <!-- <div class="row pop-up" style="display:flex; justify-content:center;">
+      <div class="box small-6 large-centered">
+        <a href="#" class="close-button">&#10006;</a>
+        <h3>Welcome</h3>
+        <p>Click on the houses to explore</p> -->
+        <!-- <a href="#" class="button">Learn More</a>
+      </div>
+    </div> -->
     
 
 
@@ -81,6 +98,7 @@
   <!--    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
 <!-- https://stackoverflow.com/questions/67248505/how-do-i-make-an-image-move-on-keys-up-down-left-right-->
 <!-- https://www.svgbackgrounds.com/svg-backgrounds-to-html/ -->
+<script src="homepagealert.js"></script>
 </body>
 </html>
 
