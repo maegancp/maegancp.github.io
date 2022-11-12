@@ -189,6 +189,8 @@ footer .form-control {
 .contactUs {
   color: rgb(65, 62, 62);
   font-weight: bold; 
+  width: 90%;
+  margin: auto;
 }
 
 /* end of footer */
@@ -373,3 +375,8 @@ h2  {
     color: rgb(65, 62, 62);
     text-align: center;
   }
+
+form {
+  width: 90%;
+  margin: auto;
+}
