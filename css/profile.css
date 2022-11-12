@@ -8,13 +8,13 @@ body {
 
   .main-container {
     width: 800px;
-    margin: 0 auto;
+    margin: auto;
   }
   
   .container {
     background-color:  white;
     padding: 40px;
-    margin: 24px;
+    margin: auto;
     box-shadow: 0 10px 30px rgba(0,0,0,.1);
   }
   
@@ -191,7 +191,6 @@ body {
   
     .form {
       max-width: revert;
-      padding: 1.5rem 2.5rem 2rem;
       transition: transform 0.8s ease-in-out, opacity 0.45s linear;
     }
   
