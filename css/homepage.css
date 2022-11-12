@@ -52,23 +52,27 @@ body {
   top: 30vh;
   left: 35vw;
   transition: all 0.2s linear;
+  z-index: 100;
 }
 
 .calendarhouse{
   position: absolute;
   top:60vh;
   left:6vw;
+  
 } 
 .profilehouse{
   position: absolute;
   top: 20vh;
   left:60vw;
+  z-index: 100;
  
 }
  .infohubhouse{
   position: absolute;
   top:65vh;
   left:70vw;
+  z-index: 100;
 } 
 
 
