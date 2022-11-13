@@ -29,13 +29,15 @@ password: apple
 
 
 How to Use the Project:
-
+If you're accessing the application by localhost:
 To access the NHS API in the Information Hub page (usefulinfo.html), download ngrok by following the instructions in https://ngrok.com/download for your operating system. 
 
 Afterwards, in order to successfully retrieve the information, upon entering a category to search for in the Information Hub page (usefulinfo.html), go to the console and click the cors-anywhere link on the error.
+![403 error](https://user-images.githubusercontent.com/70476197/201513656-5a85ccf6-3de3-4a58-9d31-c3e50a96e211.jpeg)
 
 
 Click on 'Request temporary access to the demo server' and refresh the Information Hub page (usefulinfo.html). Re-search the category and the information should be displayed!
+![error file](https://user-images.githubusercontent.com/70476197/201513660-335aaeeb-ce68-4a00-9d1a-7e51855a0029.JPG)
 
 
 # Credits
