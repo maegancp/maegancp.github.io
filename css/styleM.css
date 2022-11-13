@@ -111,7 +111,7 @@ nav ul li a:hover {
 }
 
 #start img {
-  position:relative; 
+  /* position:relative;  */
   /* background-image: url("anna-hecker-wqcQ6ODwPxU-unsplash.jpg")  ;
   background-repeat: no-repeat;
   background-size: cover;
@@ -126,6 +126,9 @@ nav ul li a:hover {
   object-fit: cover;
   width:100% ; 
 }
+
+#start  {
+  position:relative; }
 
 h1 {
     font-family: 'Playfair Display', serif;
