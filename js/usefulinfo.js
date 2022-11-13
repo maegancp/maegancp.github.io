@@ -49,17 +49,6 @@ displayInfo.addEventListener("click", (event) => {
     if (e.keyCode == 13) validate();
   });
 
-  // function done() {
-
-  //   register.className = "close";
-
-  //   setTimeout(function () {
-  //     thankyou.removeAttribute('hidden')
-  //   }, eTime);
-
-  //   register.className = 'open'
-  // }
-
   function validate() {
     ok(function () {
       // hideCurrent(done);
