@@ -49,17 +49,6 @@ displayInfo.addEventListener("click", (event) => {
     if (e.keyCode == 13) validate();
   });
 
-  // function done() {
-
-  //   register.className = "close";
-
-  //   setTimeout(function () {
-  //     thankyou.removeAttribute('hidden')
-  //   }, eTime);
-
-  //   register.className = 'open'
-  // }
-
   function validate() {
     ok(function () {
       // hideCurrent(done);
@@ -224,6 +213,7 @@ const app = Vue.createApp({
             }
           }
           document.getElementById("display").innerHTML = toDisplay;
+          document.getElementById("anothercat").innerHTML = '<a id="top" href="#app" style="color: #583C3C; font-weight:bold; text-decoration:none;margin-top:0;margin-bottom:10vh;"><img style="width: 50px;" src="img/backtotop.png"><br>Back to Top</a>';
         })
 
         .catch((error) => {
