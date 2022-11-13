@@ -24,6 +24,14 @@ How to Use the Project:
 You can also make use of visual aids by including materials like screenshots to show examples of the running project and also the structure and design principles used in your project.
 
 Also if your project will require authentication like passwords or usernames, this is a good section to include the credentials. -->
+To access the NHS API in the Information Hub page (usefulinfo.html), download ngrok by following the instructions in https://ngrok.com/download for your operating system. 
+
+Afterwards, in order to successfully retrieve the information, upon entering a category to search for in the Information Hub page (usefulinfo.html), go to the console and click the cors-anywhere link on the error.
+
+
+Click on 'Request temporary access to the demo server' and refresh the Information Hub page (usefulinfo.html). Re-search the category and the information should be displayed!
+
+
 
 License:
 <!-- lets other developers know what they can and cannot do with your project. -->
