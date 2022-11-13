@@ -40,8 +40,25 @@ function moveSlider() {
 
   bullets.forEach((bull) => bull.classList.remove("active"));
   this.classList.add("active");
+  // console.log(this)
 }
 
 bullets.forEach((bullet) => {
   bullet.addEventListener("click", moveSlider);
 });
+
+setInterval(function () {
+  let index = Number(document.getElementsByClassName('active')[0].getAttribute('data-value'))+1;
+  if (index == 4){
+    index = 1
+  }
+  let currentImage = document.querySelector(`.img-${index}`);
+  images.forEach((img) => img.classList.remove("show"));
+  currentImage.classList.add("show");
+
+  const textSlider = document.querySelector(".text-group");
+  textSlider.style.transform = `translateY(${-(index - 1) * 2.2}rem)`;
+
+  bullets.forEach((bull) => bull.classList.remove("active"));
+  document.getElementsByTagName('span')[2+index-1].classList.add("active");
+}, 3000)

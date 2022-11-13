@@ -133,7 +133,8 @@ if (document.title == "Profile"){
   }
   function save(){
     document.getElementsByTagName('button')[0].removeEventListener('click',save)
-    set(ref(db, "users/" + document.getElementById("username").value), {
+    if (confirm("Update Profile Information?")) {
+      set(ref(db, "users/" + document.getElementById("username").value), {
       username: document.getElementById("username").value,
       fetus_nickname: document.getElementById("fetus").value,
       duedate: document.getElementById("due").value,
@@ -149,6 +150,7 @@ if (document.title == "Profile"){
     })
     document.getElementById('updated').innerText = 'Information Updated Successfully'
     document.getElementsByTagName('button')[0].addEventListener('click',edit)
+    }
   }
   
 }
