@@ -29,14 +29,14 @@ password: apple
 
 
 How to Use the Project:
-<!-- Provide instructions and examples so users/contributors can use the project. This will make it easy for them in case they encounter a problem – they will always have a place to reference what is expected.
 
-You can also make use of visual aids by including materials like screenshots to show examples of the running project and also the structure and design principles used in your project.
+To access the NHS API in the Information Hub page (usefulinfo.html), download ngrok by following the instructions in https://ngrok.com/download for your operating system. 
 
-Also if your project will require authentication like passwords or usernames, this is a good section to include the credentials. -->
+Afterwards, in order to successfully retrieve the information, upon entering a category to search for in the Information Hub page (usefulinfo.html), go to the console and click the cors-anywhere link on the error.
 
-![alt text](https://github.com/[maegancp]/[wad2g3t6]/blob/[branch]/image.jpg?raw=true)
-![alt text](C:\Users\celin\Documents\wad2G3T6\img\403 error.jpeg)
+
+Click on 'Request temporary access to the demo server' and refresh the Information Hub page (usefulinfo.html). Re-search the category and the information should be displayed!
+
 
 # Credits
 - Group 6:
