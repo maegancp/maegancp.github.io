@@ -30,7 +30,11 @@ if (document.title == "Quiz") {
   });
   function writeInput() {
     push(
-      ref(db, "quiz/" + document.location.href.split("?")[1].split("=")[1].replace('%20','')),
+      ref(
+        db,
+        "quiz/" +
+          document.location.href.split("?")[1].split("=")[1].replace("%20", "")
+      ),
       document.getElementById("inputField").value.toLowerCase()
     );
   }
@@ -44,14 +48,14 @@ if (document.title == "Community Recommendations") {
     onValue(ref(db, "quiz/" + chosen), (snapshot) => {
       var data = snapshot.val();
       var top3 = [];
-      console.log(Object.values(data).join(" "))
+      console.log(Object.values(data).join(" "));
       if (data != null) {
         axios
           .get("https://quickchart.io/wordcloud", {
             params: {
               text: Object.values(data).join(" "),
               // backgroundColor: 'white'
-              width: Number(window.innerWidth/2)
+              width: Number(window.innerWidth / 2),
             },
           })
           .then((response) => {
@@ -64,9 +68,12 @@ if (document.title == "Community Recommendations") {
                 cnt += 1;
               }
             }
-            document.getElementById("podium0").innerHTML = "🥇" + "<br>&nbsp" + top3[0] + "&nbsp";
-            document.getElementById("podium1").innerHTML = "🥈" + "<br>&nbsp" + top3[1] + "&nbsp";
-            document.getElementById("podium2").innerHTML = "🥉" + "<br>&nbsp" + top3[2] + "&nbsp";
+            document.getElementById("podium0").innerHTML =
+              "🥇" + "<br>&nbsp" + top3[0] + "&nbsp";
+            document.getElementById("podium1").innerHTML =
+              "🥈" + "<br>&nbsp" + top3[1] + "&nbsp";
+            document.getElementById("podium2").innerHTML =
+              "🥉" + "<br>&nbsp" + top3[2] + "&nbsp";
             // bar(["🥈"+top3[1], "🥇"+top3[0], "🥉"+top3[2]])
           })
           .catch((error) => {
@@ -85,7 +92,7 @@ if (document.title == "Login") {
     onValue(ref(db, "users/" + username), (snapshot) => {
       var data = snapshot.val();
       if (data != null && data.password == password) {
-        document.location.href = 'homepage.html'
+        document.location.href = "homepage.html";
         sessionStorage.setItem("username", username);
       } else {
         alert("Username/Password entered is invalid");
@@ -94,63 +101,87 @@ if (document.title == "Login") {
   }
   regis.addEventListener("click", register);
   function register() {
-    var details = {
-      'username': document.getElementById("susername").value,
-      'fetus_nickname': document.getElementById("fetus").value,
-      'duedate': document.getElementById("due").value,
-      'email': document.getElementById("email").value,
-      'password': document.getElementById("pw").value
+    if (
+      document.getElementById("susername").value &&
+      document.getElementById("fetus").value &&
+      document.getElementById("due").value &&
+      document.getElementById("email").value &&
+      document.getElementById("pw").value
+    ) {
+      var details = {
+        username: document.getElementById("susername").value,
+        fetus_nickname: document.getElementById("fetus").value,
+        duedate: document.getElementById("due").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("pw").value,
+      };
+      set(
+        ref(db, "users/" + document.getElementById("susername").value),
+        details
+      );
+      main.classList.toggle("sign-up-mode");
     }
-    set(
-      ref(db, "users/" + document.getElementById("susername").value), details );
-      main.classList.toggle("sign-up-mode")
+    else {
+      alert('Please fill in the information required!!')
+    }
   }
 }
 
-if (document.title == "Profile"){
-  var user = sessionStorage.getItem("username")
-  console.log(sessionStorage.getItem("username"))
+if (document.title == "Profile") {
+  var user = sessionStorage.getItem("username");
+  console.log(sessionStorage.getItem("username"));
   function displayInfo() {
     onValue(ref(db, "users/" + user), (snapshot) => {
-    var data = snapshot.val();
-    document.getElementById('username').setAttribute('value',user)
-    document.getElementById('fetus').setAttribute('value',data.fetus_nickname)
-    document.getElementById('due').setAttribute('value',data.duedate)
-    document.getElementById('email').setAttribute('value',data.email)
-    document.getElementById('pw').setAttribute('value',data.password)
-  })
+      var data = snapshot.val();
+      document.getElementById("username").setAttribute("value", user);
+      document
+        .getElementById("fetus")
+        .setAttribute("value", data.fetus_nickname);
+      document.getElementById("due").setAttribute("value", data.duedate);
+      document.getElementById("email").setAttribute("value", data.email);
+      document.getElementById("pw").setAttribute("value", data.password);
+    });
   }
-  displayInfo()
-  document.getElementsByTagName('button')[0].addEventListener('click',edit)
+  displayInfo();
+  document.getElementsByTagName("button")[0].addEventListener("click", edit);
   function edit() {
-    document.getElementsByTagName('button')[0].removeEventListener('click',edit)
-    document.getElementsByTagName('button')[0].innerText = "Save"
+    document
+      .getElementsByTagName("button")[0]
+      .removeEventListener("click", edit);
+    document.getElementsByTagName("button")[0].innerText = "Save";
     var inputs = document.querySelectorAll(".input-field");
     inputs.forEach((inp) => {
-      inp.removeAttribute('readonly');
+      inp.removeAttribute("readonly");
     });
-    document.getElementsByTagName('button')[0].addEventListener('click',save)
+    document.getElementsByTagName("button")[0].addEventListener("click", save);
   }
-  function save(){
-    document.getElementsByTagName('button')[0].removeEventListener('click',save)
+  function save() {
+    document
+      .getElementsByTagName("button")[0]
+      .removeEventListener("click", save);
     if (confirm("Update Profile Information?")) {
       set(ref(db, "users/" + document.getElementById("username").value), {
-      username: document.getElementById("username").value,
-      fetus_nickname: document.getElementById("fetus").value,
-      duedate: document.getElementById("due").value,
-      email: document.getElementById("email").value,
-      password: document.getElementById("pw").value,
-    })
-    sessionStorage.setItem("username", document.getElementById("username").value)
-    displayInfo()
-    document.getElementsByTagName('button')[0].innerText='Edit Profile'
-    var inputs = document.querySelectorAll(".input-field");
-    inputs.forEach((inp) => {
-      inp.setAttribute('readonly','')
-    })
-    document.getElementById('updated').innerText = 'Information Updated Successfully'
-    document.getElementsByTagName('button')[0].addEventListener('click',edit)
+        username: document.getElementById("username").value,
+        fetus_nickname: document.getElementById("fetus").value,
+        duedate: document.getElementById("due").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("pw").value,
+      });
+      sessionStorage.setItem(
+        "username",
+        document.getElementById("username").value
+      );
+      displayInfo();
+      document.getElementsByTagName("button")[0].innerText = "Edit Profile";
+      var inputs = document.querySelectorAll(".input-field");
+      inputs.forEach((inp) => {
+        inp.setAttribute("readonly", "");
+      });
+      document.getElementById("updated").innerText =
+        "Information Updated Successfully";
+      document
+        .getElementsByTagName("button")[0]
+        .addEventListener("click", edit);
     }
   }
-  
 }
